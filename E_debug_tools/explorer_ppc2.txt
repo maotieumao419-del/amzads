@@ -1,0 +1,24 @@
+--- Sheet: 250TH_2PCS_STICKER ---
+Campaign Names:
+0   NaN
+1   NaN
+2   NaN
+3   NaN
+4   NaN
+Columns around Trạng thái: ['Campaign Name', 'Loại Campaign', 'Target', 'Ghi chú', 'Trạng thái']
+--- Sheet: UY-AO7W-2FWB ---
+Campaign Names:
+0   NaN
+1   NaN
+2   NaN
+3   NaN
+4   NaN
+Columns around Trạng thái: ['Campaign Name', 'Loại Campaign', 'Target', 'Ghi chú', 'Trạng thái']
+--- Sheet: Copy of 250TH_2PCS_STICKER ---
+Campaign Names:
+0   NaN
+1   NaN
+2   NaN
+3   NaN
+4   NaN
+Columns around Trạng thái: ['Campaign Name', 'Loại Campaign', 'Target', 'Ghi chú', 'Trạng thái']

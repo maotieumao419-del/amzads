@@ -1,0 +1,66 @@
+[
+  {
+    "_comment": "RULE 1 — Campaign BROAD: Đặt Bidding Adjustment Product Page = 0%",
+    "conditions": {
+      "target_entity": "Bidding Adjustment",
+      "campaign_contains": "broad",
+      "placement_type": "product page"
+    },
+    "actions": {
+      "action_type": "set_value",
+      "target_column": "Percentage",
+      "value": "0"
+    }
+  },
+  {
+    "_comment": "RULE 2 — Campaign PHRASE: Đặt Bidding Adjustment Product Page = 10%",
+    "conditions": {
+      "target_entity": "Bidding Adjustment",
+      "campaign_contains": "phrase",
+      "placement_type": "product page"
+    },
+    "actions": {
+      "action_type": "set_value",
+      "target_column": "Percentage",
+      "value": "10"
+    }
+  },
+  {
+    "_comment": "RULE 3 — Campaign EXACT: Tăng Bid +0.1 nếu Impression < 100",
+    "conditions": {
+      "target_entity": "Keyword",
+      "campaign_contains": "exact",
+      "metric_conditions": [
+        {
+          "column": "Impressions",
+          "operator": "<",
+          "value": 100
+        }
+      ]
+    },
+    "actions": {
+      "action_type": "increase_value",
+      "target_column": "Bid",
+      "value": 0.1
+    }
+  },
+  {
+    "_comment": "RULE 4 — Campaign EX (viết tắt của Exact): Tăng Bid +0.1 nếu Impression < 100",
+    "conditions": {
+      "target_entity": "Keyword",
+      "campaign_contains": "ex",
+      "metric_conditions": [
+        {
+          "column": "Impressions",
+          "operator": "<",
+          "value": 100
+        }
+      ]
+    },
+    "actions": {
+      "action_type": "increase_value",
+      "target_column": "Bid",
+      "value": 0.1
+    }
+  }
+]

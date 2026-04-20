@@ -1,0 +1,8 @@
+File: Final_Mass_Update_Upload.xlsx - Sheets: ['Sponsored Products Campaigns']
+Columns: ['Product', 'Entity', 'Operation', 'Campaign ID', 'Ad Group ID', 'Portfolio ID', 'Ad ID', 'Keyword ID', 'Product Targeting ID', 'Campaign Name', 'Ad Group Name', 'Campaign Name (Informational only)', 'Ad Group Name (Informational only)', 'Portfolio Name (Informational only)', 'Start Date']...
+   Campaign Name
+0            NaN
+1            NaN
+2            NaN
+File: Graduation_Campaigns.xlsx - Sheets: ['Sheet1']
+File: QC_Nguyên TDH.xlsx - Sheets: ['Sheet1']

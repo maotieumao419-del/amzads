@@ -1,0 +1,26 @@
+Reading PPC_NGUYÊN.xlsx...
+Sheets in PPC_NGUYÊN: ['Listing', 'Portfolio ID', '250TH_2PCS_STICKER', 'UY-AO7W-2FWB', 'Copy of 250TH_2PCS_STICKER', '250TH_STICKER_SET5', 'PPC_LHH_  250TH_DEGO12X3,5', 'PPC_MUSEMORY_BUTTERFLYMOM', 'MONEYHOLDER_GRADUATION2026', 'MONEYHOLDER_GRADUATION']
+
+--- Sheet: 250TH_2PCS_STICKER ---
+Columns: ['STT', 'Campaign Name', 'Loại Campaign', 'Target', 'Ghi chú', 'Trạng thái']
+First 2 targets:
+0                  250th anniversary decal
+1    250 year american anniversary sticker
+Trạng thái index: 5
+
+--- Sheet: UY-AO7W-2FWB ---
+Columns: ['STT', 'Campaign Name', 'Loại Campaign', 'Target', 'Ghi chú', 'Trạng thái']
+First 2 targets:
+0       reward jar classroom\n
+1    class reward jar magnetic
+Trạng thái index: 5
+
+--- Sheet: Copy of 250TH_2PCS_STICKER ---
+Columns: ['STT', 'Campaign Name', 'Loại Campaign', 'Target', 'Ghi chú', 'Trạng thái']
+First 2 targets:
+0                  250th anniversary decal
+1    250 year american anniversary sticker
+Trạng thái index: 5
+
+Reading AMAQUANG+ AMATRA.xlsx...
+Sheets in AMAQUANG: ['NEW_SET', 'Nguyên Tắc', 'Chính sách', '1_Thuật ngữ', '2_Các Loại Campain', '3_Tracking', '4_Nguyên Tắc', '4.1_C,Trà']
