@@ -89,25 +89,25 @@ def main():
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Campaign', 'Operation': 'Create',
                      'Campaign ID': campaign_id, 'Portfolio ID': portfolio_id,
                      'Campaign Name': campaign_name, 'Start Date': today_str,
-                     'Targeting Type': 'MANUAL', 'State': 'enabled',
+                     'Targeting Type': 'Manual', 'State': 'Enabled',
                      'Daily Budget': daily_budget, 'Bidding Strategy': 'Dynamic bids - down only'})
 
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Bidding Adjustment', 'Operation': 'Create',
-                     'Campaign ID': campaign_id, 'State': 'enabled',
-                     'Placement': 'placement top', 'Percentage': '35'})
+                     'Campaign ID': campaign_id, 'State': 'Enabled',
+                     'Placement': 'Placement Top', 'Percentage': '35'})
 
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Ad Group', 'Operation': 'Create',
                      'Campaign ID': campaign_id, 'Ad Group ID': ad_group_id,
-                     'Ad Group Name': ad_group_id, 'State': 'enabled',
+                     'Ad Group Name': ad_group_id, 'State': 'Enabled',
                      'Ad Group Default Bid': default_bid})
 
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Product Ad', 'Operation': 'Create',
                      'Campaign ID': campaign_id, 'Ad Group ID': ad_group_id,
-                     'State': 'enabled', 'SKU': sku})
+                     'State': 'Enabled', 'SKU': sku})
 
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Keyword', 'Operation': 'Create',
                      'Campaign ID': campaign_id, 'Ad Group ID': ad_group_id,
-                     'State': 'enabled', 'Bid': default_bid,
+                     'State': 'Enabled', 'Bid': default_bid,
                      'Keyword Text': kw, 'Match Type': 'exact'})
 
     df_upload       = pd.DataFrame(rows, columns=AMAZON_TEMPLATE_COLUMNS).fillna("")

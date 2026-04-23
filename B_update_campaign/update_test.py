@@ -156,7 +156,7 @@ def main():
             6: "Create a new Ad Group in an existing Campaign",
             7: "Pause a Keyword",
             8: "Archive a Keyword",
-            9: "Add a new Keyword to an existing Campaign"
+            9: "Add a new Keyword or Product Targeting (ASIN) to an existing Campaign"
         }
 
         while True:
@@ -195,8 +195,7 @@ def main():
                 if current_action == 1:
                     row_data['Entity'] = "Campaign"; row_data['Operation'] = "Update"
                     row_data['Campaign ID'] = locked_campaign_id
-                    row_data['Campaign Name'] = input("Enter New Campaign Name: ").strip()
-                    row_data['State'] = get_menu_selection("👉 Chọn trạng thái (State):", {1: 'enabled', 2: 'paused', 3: 'archived'})
+                    row_data['State'] = get_menu_selection("👉 Chọn trạng thái (State):", {1: 'Enabled', 2: 'Paused', 3: 'Archived'})
 
                 elif current_action == 2:
                     row_data['Entity'] = "Campaign"; row_data['Operation'] = "Update"
@@ -210,27 +209,27 @@ def main():
                     row_data['Campaign ID'] = locked_campaign_id
 
                 elif current_action == 4:
-                    row_data['Entity'] = "Ad group"; row_data['Operation'] = "Update"
+                    row_data['Entity'] = "Ad Group"; row_data['Operation'] = "Update"
                     row_data['Campaign ID'] = locked_campaign_id; row_data['Ad Group ID'] = locked_ad_group_id
                     row_data['Ad Group Name'] = input("Enter New Ad Group Name: ").strip()
                     row_data['Ad Group Default Bid'] = get_float_input("Enter New Default Bid (e.g., 1.5): ")
 
                 elif current_action == 5:
-                    row_data['Entity'] = "Ad group"; row_data['Operation'] = "Archive"
+                    row_data['Entity'] = "Ad Group"; row_data['Operation'] = "Archive"
                     row_data['Campaign ID'] = locked_campaign_id; row_data['Ad Group ID'] = locked_ad_group_id
 
                 elif current_action == 6:
-                    row_data['Entity'] = "Ad group"; row_data['Operation'] = "Create"
+                    row_data['Entity'] = "Ad Group"; row_data['Operation'] = "Create"
                     row_data['Campaign ID'] = locked_campaign_id
                     new_ag_name = input("Enter New Ad Group Name: ").strip()
                     row_data['Ad Group ID'] = new_ag_name; row_data['Ad Group Name'] = new_ag_name
                     row_data['Ad Group Default Bid'] = get_float_input("Enter Default Bid (e.g., 1.0): ")
-                    row_data['State'] = "enabled"
+                    row_data['State'] = "Enabled"
 
                 elif current_action == 7:
                     row_data['Entity'] = "Keyword"; row_data['Operation'] = "Update"
                     row_data['Campaign ID'] = locked_campaign_id; row_data['Ad Group ID'] = locked_ad_group_id
-                    row_data['Keyword ID'] = locked_keyword_id; row_data['State'] = "paused"
+                    row_data['Keyword ID'] = locked_keyword_id; row_data['State'] = "Paused"
 
                 elif current_action == 8:
                     row_data['Entity'] = "Keyword"; row_data['Operation'] = "Archive"
@@ -238,17 +237,25 @@ def main():
                     row_data['Keyword ID'] = locked_keyword_id
 
                 elif current_action == 9:
-                    row_data['Entity'] = "Keyword"; row_data['Operation'] = "Create"
+                    target_type = get_menu_selection("👉 Chọn loại mục tiêu mới:", {1: 'Keyword', 2: 'Product Targeting (ASIN/Category)'})
+                    row_data['Entity'] = target_type
+                    row_data['Operation'] = "Create"
                     row_data['Campaign ID'] = locked_campaign_id; row_data['Ad Group ID'] = locked_ad_group_id
-                    row_data['Keyword Text'] = input("Enter New Keyword Text: ").strip()
-                    row_data['Match Type']   = get_menu_selection("👉 Chọn loại đối sánh:", {1: 'exact', 2: 'phrase', 3: 'broad'})
-                    bid_input = input("Enter Keyword Bid (press Enter to inherit): ").strip()
+                    
+                    target_val = input(f"Enter New {target_type}: ").strip()
+                    if target_type == 'Keyword':
+                        row_data['Keyword Text'] = target_val
+                        row_data['Match Type']   = get_menu_selection("👉 Chọn loại đối sánh:", {1: 'exact', 2: 'phrase', 3: 'broad'})
+                    else:
+                        row_data['Product Targeting Expression'] = target_val
+                        
+                    bid_input = input("Enter Bid (press Enter to inherit): ").strip()
                     if bid_input:
                         try:
                             row_data['Bid'] = str(float(bid_input))
                         except ValueError:
                             print("⚠️  Bid không hợp lệ, bỏ qua — sẽ kế thừa từ Ad Group Default Bid.")
-                    row_data['State'] = "enabled"
+                    row_data['State'] = "Enabled"
 
                 ENTITY_FIELDS = {
                     'campaign':  ['Product', 'Entity', 'Operation', 'Campaign ID', 'Campaign Name',
@@ -259,6 +266,8 @@ def main():
                     'keyword':   ['Product', 'Entity', 'Operation', 'Campaign ID', 'Ad Group ID',
                                   'Keyword ID', 'State', 'Keyword Text', 'Match Type', 'Bid',
                                   'Native Language Keyword', 'Native Language Locale'],
+                    'product targeting': ['Product', 'Entity', 'Operation', 'Campaign ID', 'Ad Group ID',
+                                  'Product Targeting ID', 'State', 'Product Targeting Expression', 'Bid'],
                 }
                 entity_type    = row_data['Entity'].lower()
                 allowed_fields = ENTITY_FIELDS.get(entity_type, list(AMAZON_TEMPLATE_COLUMNS))

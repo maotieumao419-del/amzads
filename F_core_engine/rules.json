@@ -4,7 +4,7 @@
     "conditions": {
       "target_entity": "Bidding Adjustment",
       "campaign_contains": "broad",
-      "placement_type": "product page"
+      "placement_type": "Placement Product Page"
     },
     "actions": {
       "action_type": "set_value",
@@ -17,7 +17,7 @@
     "conditions": {
       "target_entity": "Bidding Adjustment",
       "campaign_contains": "phrase",
-      "placement_type": "product page"
+      "placement_type": "Placement Product Page"
     },
     "actions": {
       "action_type": "set_value",

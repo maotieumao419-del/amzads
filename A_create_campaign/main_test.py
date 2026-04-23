@@ -48,21 +48,21 @@ def generate_manual_campaign(top_kw_objects):
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Campaign', 'Operation': 'Create',
                      'Campaign ID': campaign_id, 'Portfolio ID': kw_obj.get('Portfolio ID', ''),
                      'Campaign Name': campaign_name, 'Start Date': today_str,
-                     'Targeting Type': 'MANUAL', 'State': 'enabled',
+                     'Targeting Type': 'Manual', 'State': 'Enabled',
                      'Daily Budget': daily_budget_str, 'Bidding Strategy': 'Dynamic bids - down only'})
 
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Bidding Adjustment', 'Operation': 'Create',
-                     'Campaign ID': campaign_id, 'State': 'enabled',
-                     'Placement': 'placement top', 'Percentage': '35'})
+                     'Campaign ID': campaign_id, 'State': 'Enabled',
+                     'Placement': 'Placement Top', 'Percentage': '35'})
 
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Ad Group', 'Operation': 'Create',
                      'Campaign ID': campaign_id, 'Ad Group ID': ad_group_id,
-                     'Ad Group Name': ad_group_id, 'State': 'enabled',
+                     'Ad Group Name': ad_group_id, 'State': 'Enabled',
                      'Ad Group Default Bid': '0.50'})
 
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Product Ad', 'Operation': 'Create',
                      'Campaign ID': campaign_id, 'Ad Group ID': ad_group_id,
-                     'State': 'enabled', 'SKU': kw_obj.get('SKU', '')})
+                     'State': 'Enabled', 'SKU': kw_obj.get('SKU', '')})
 
         try:
             bid_val = float(kw_obj.get('Bid', '1.0'))
@@ -74,7 +74,7 @@ def generate_manual_campaign(top_kw_objects):
 
         rows.append({'Product': 'Sponsored Products', 'Entity': 'Keyword', 'Operation': 'Create',
                      'Campaign ID': campaign_id, 'Ad Group ID': ad_group_id,
-                     'State': 'enabled', 'Bid': final_bid_str,
+                     'State': 'Enabled', 'Bid': final_bid_str,
                      'Keyword Text': raw_kw, 'Match Type': 'exact'})
 
     df_upload = pd.DataFrame(rows, columns=AMAZON_TEMPLATE_COLUMNS).fillna("")
