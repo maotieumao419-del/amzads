@@ -1,0 +1,21 @@
+                           0                                         1                  2                                         3                                     4           5      6      7     8
+0   Full SKU: SCHOOLBOARD_02                                       NaN                NaN                                       NaN                                   NaN   3004-0405    NaN    NaN   NaN
+1                        STT                             Campaign Name      Loại Campaign                                    Target                               Ghi chú  Impression  Click  Order  Note
+2                          1   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                         last day of pre k   [Exact] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+3                          2   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                              school signs   [Exact] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+4                          3   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                       first day if school   [Exact] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+5                          4   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)    personalized first day of school board   [Exact] - [] - [T: 0 / P: 0 / R: 0]           9      0      0   NaN
+6                          5   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                   1st day of school board   [Exact] - [] - [T: 0 / P: 0 / R: 0]           6      0      0   NaN
+7                          6   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)               my first day of school sign   [Exact] - [] - [T: 0 / P: 0 / R: 0]           3      0      0   NaN
+8                          7   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)  school signs for kids first and last day   [Exact] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+9                          8   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)           first day of school sign custom   [Exact] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+10                         9   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                        last day of school   [Exact] - [] - [T: 0 / P: 0 / R: 0]           2      0      0   NaN
+11                        10   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                     first day school sign   [Exact] - [] - [T: 0 / P: 0 / R: 0]          11      0      0   NaN
+12                        11   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                       forst day of school   [Exact] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+13                        12   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                        first day of pre-k   [Exact] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+14                        13   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                last day of preschool sign   [Exact] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+15                        14   B0FDWNP259_BANGVANMAY_SP_KW_LOW-EX_0.33  Keyword (Từ khóa)                   first day last day sign   [Exact] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+16                        15  B0FDWNP259_BANGVANMAY_SUGGEST_0.3_070825  Keyword (Từ khóa)                            first day sign   [Broad] - [] - [T: 0 / P: 0 / R: 0]           7      0      0   NaN
+17                        16  B0FDWNP259_BANGVANMAY_SUGGEST_0.3_070825  Keyword (Từ khóa)                     first day school sign  [Phrase] - [] - [T: 0 / P: 0 / R: 0]           1      0      0   NaN
+18                        17  B0FDWNP259_BANGVANMAY_SUGGEST_0.3_070825  Keyword (Từ khóa)                         first day daycare   [Broad] - [] - [T: 0 / P: 0 / R: 0]          13      0      0   NaN
+19                        18  B0FDWNP259_BANGVANMAY_SUGGEST_0.3_070825  Keyword (Từ khóa)                      last day school sign   [Broad] - [] - [T: 0 / P: 0 / R: 0]           5      0      0   NaN

@@ -71,61 +71,92 @@ def find_col(df: pd.DataFrame, col_name: str) -> str | None:
 # NOTE PARSER — nhất quán với excel_new_camp.py
 # =============================================================================
 
-def parse_note(note: str) -> dict:
+def parse_note(note: str, campaign_name: str = "") -> dict:
     """
     Phân tích Ghi chú → dict với match_type, bid, placements.
-
-    Hỗ trợ đầy đủ:
-      "exact"                  → match=exact,  bid=0.50, T=R=P=0
-      "exact 0.3_35TPR"        → match=exact,  bid=0.30, T=R=P=35
-      "Phrase 0.45, 30TRP"     → match=phrase, bid=0.45, T=R=P=30
-      "exact, 50T, 0.7Đ"       → match=exact,  bid=0.70, T=50, R=0, P=0
-      "Phrase, 20TRP, 0.5Đ"    → match=phrase, bid=0.50, T=20, R=20, P=20
-      "exact, 50RP, 0.68Đ"     → match=exact,  bid=0.68, T=0,  R=50, P=50
-      "0.6 20T"                → match=None,   bid=0.60, T=20, R=0,  P=0
-      "0.45"                   → match=None,   bid=0.45, T=R=P=0
-
-    LOGIC PLACEMENT:
-      Tìm pattern (số)([trp]+) trong chuỗi (sau khi normalize _ → space).
-      Tách số thành int. Tách ký tự: T→Top, R→Rest, P→Product Page.
+    Hỗ trợ cấu trúc linh hoạt: exact_0.5_2T, exact 0.5, 2 T, Phrase 0.45, 30TRP...
     """
     note_lower = note.lower()
 
-    # ── 1. Match type ─────────────────────────────────────────────────────────
-    # Hỗ trợ: "exact_35TPR", "exact, 50T", "Phrase 0.45"
-    m_type = re.search(r'(?<![a-z])(exact|phrase|broad)(?![a-z])', note_lower)
-    match_type = m_type.group(1) if m_type else None
-
-    # ── 2. Placements ─────────────────────────────────────────────────────────
+    # 1. PLACEMENTS
     placements = {"T": 0, "R": 0, "P": 0}
-    p_matches = re.findall(r'(\d+)\s*[_,]?\s*([trp]{1,3})\b', note_lower)
-    for num_str, keys_str in p_matches:
-        val = int(num_str)
-        if 't' in keys_str: placements["T"] = val
-        if 'r' in keys_str: placements["R"] = val
-        if 'p' in keys_str: placements["P"] = val
+    placement_tags = []
 
-    # ── 3. Bid ────────────────────────────────────────────────────────────────
-    bid = DEFAULT_BID
-    bid_new = re.search(r'(\d+(?:\.\d+)?)\s*[đĐ]', note)
-    if bid_new:
-        bid = float(bid_new.group(1))
+    # Tìm các mẫu như "2T", "2 T", "35 TPR", "50_R_P"
+    p_matches = list(re.finditer(r'(\d+(?:\.\d+)?)\s*[_,]?\s*([tpr][tpr\s_,]*)(\b|$)', note_lower))
+    for match in p_matches:
+        num_str = match.group(1)
+        keys_str = match.group(2).replace(' ', '').replace('_', '').replace(',', '')
+        
+        # Đảm bảo phần chữ chỉ chứa t, r, p
+        if set(keys_str).issubset(set('trp')):
+            val = int(float(num_str))
+            tag_keys = ""
+            if 't' in keys_str: placements["T"] = val; tag_keys += "T"
+            if 'r' in keys_str: placements["R"] = val; tag_keys += "R"
+            if 'p' in keys_str: placements["P"] = val; tag_keys += "P"
+            
+            if tag_keys:
+                placement_tags.append(f"{val}{tag_keys}")
+            
+            # Xóa phần placement khỏi note_lower để tránh nhận diện nhầm thành bid
+            note_lower = note_lower.replace(match.group(0), ' ')
+
+    # Format dạng [T: 0 / P: 0 / R: 0]
+    p_new = list(re.finditer(r'([tpr])\s*:\s*(\d+)', note_lower))
+    for match in p_new:
+        k = match.group(1)
+        v = int(match.group(2))
+        if k == 't': placements["T"] = v
+        if k == 'r': placements["R"] = v
+        if k == 'p': placements["P"] = v
+        note_lower = note_lower.replace(match.group(0), ' ')
+
+    placement_tag = "_".join(dict.fromkeys(placement_tags)) if placement_tags else "00T"
+
+    # 2. MATCH TYPE
+    if "exact" in note_lower or "ex" in note_lower:
+        match_type = "exact"
+    elif "phrase" in note_lower or "ph" in note_lower:
+        match_type = "phrase"
+    elif "broad" in note_lower or "br" in note_lower:
+        match_type = "broad"
+    elif "targeting" in note_lower or "pt" in note_lower or "asin" in note_lower:
+        match_type = "targeting"
+    elif "auto" in note_lower or "au" in note_lower:
+        match_type = "auto"
     else:
-        note_norm = note.replace('_', ' ')
-        floats = [float(x) for x in re.findall(r'\d+\.\d+', note_norm)]
-        for f in floats:
-            if f < 10:
-                bid = f
-                break
-        else:
-            b = re.search(r'(?i)bid\s*(\d+(?:\.\d+)?)', note)
-            if b:
-                bid = float(b.group(1))
+        match_type = "unknown"
+
+    # 3. BID
+    bid = DEFAULT_BID
+    bid_found = False
+    
+    # Tìm tất cả các số còn lại trong chuỗi (sau khi đã xóa placement)
+    floats = re.findall(r'(\d+(?:\.\d+)?)', note_lower)
+    for f_str in floats:
+        f = float(f_str)
+        # Thông thường bid < 30 và > 0
+        if 0 < f < 30:
+            bid = f
+            bid_found = True
+            break
+
+    # Fallback to campaign_name if no explicit bid found in note
+    if not bid_found and campaign_name:
+        # Tìm số thập phân trong Campaign Name, ví dụ: _0.33 hoặc _0.3_070825
+        camp_floats = [float(x) for x in re.findall(r'_(\d+\.\d+)(?:_|$)', campaign_name)]
+        if camp_floats:
+            for f in reversed(camp_floats): # Lấy số cuối cùng thỏa mãn < 10
+                if f < 10:
+                    bid = f
+                    break
 
     return {
         "match_type": match_type,
         "bid":        round(float(bid), 4),
         "placements": placements,
+        "placement_tag": placement_tag
     }
 
 
@@ -175,9 +206,22 @@ def load_processed_sheets(processed_file: str) -> dict[str, pd.DataFrame]:
 
     sheets_data = {}
     for sn in xls.sheet_names:
-        df = pd.read_excel(xls, sheet_name=sn, dtype=str)
-        df.columns = df.columns.str.strip()
+        # Read without header to find the true header row dynamically
+        df = pd.read_excel(xls, sheet_name=sn, dtype=str, header=None)
+        
+        header_idx = 0
+        for idx, row in df.iterrows():
+            row_vals = [str(x).strip().lower() for x in row.values if pd.notna(x)]
+            if "target" in row_vals or "campaign name" in row_vals or "ghi chú" in row_vals:
+                header_idx = idx
+                break
+                
+        # Set the columns to the header row found
+        df.columns = df.iloc[header_idx].astype(str).str.strip()
+        # Keep only the rows after the header
+        df = df.iloc[header_idx + 1:].reset_index(drop=True)
         df.fillna("", inplace=True)
+        
         sheets_data[sn] = df
         print(f"  [OK] Sheet '{sn}': {len(df)} dòng")
 
@@ -192,7 +236,7 @@ def load_processed_sheets(processed_file: str) -> dict[str, pd.DataFrame]:
 def build_7_row_block(
     campaign_name : str,
     target_sku    : str,
-    keyword_text  : str,
+    raw_keyword   : str,
     match_type    : str,
     base_bid      : float,
     placements    : dict,
@@ -246,7 +290,7 @@ def build_7_row_block(
     r5 = base_row()
     r5["Entity"]               = "Ad Group"
     r5["Ad Group Id"]          = campaign_name
-    r5["Ad Group Name"]        = keyword_text
+    r5["Ad Group Name"]        = raw_keyword
     r5["Ad Group Default Bid"] = base_bid
 
     r6 = base_row()
@@ -262,10 +306,10 @@ def build_7_row_block(
              or str(campaign_type).strip().upper() == "PT")
     if is_pt:
         r7["Entity"] = "Product Targeting"
-        r7["Product Targeting Expression"] = keyword_text
+        r7["Product Targeting Expression"] = raw_keyword
     else:
         r7["Entity"]       = "Keyword"
-        r7["Keyword Text"] = keyword_text
+        r7["Keyword Text"] = raw_keyword
         r7["Match Type"]   = match_type
 
     return [r1, r2, r3, r4, r5, r6, r7]
@@ -355,12 +399,22 @@ def main():
     print("=" * 65)
 
     for target_sku, df_sku in sheets_data.items():
+        original_sku = target_sku
         portfolio_id = sku_portfolio_map.get(target_sku, "")
+        
+        # Recover full SKU if truncated to 31 chars
+        if not portfolio_id:
+            for map_sku, pid in sku_portfolio_map.items():
+                if map_sku[:31] == target_sku:
+                    target_sku = map_sku
+                    portfolio_id = pid
+                    break
+                    
         if not portfolio_id or portfolio_id.lower() == "nan":
             print(f"\n  [WARN] '{target_sku}' không có Portfolio ID → để trống")
             portfolio_id = ""
 
-        print(f"\n  SKU: {target_sku}  |  Portfolio: {portfolio_id}  |  {len(df_sku)} dòng")
+        print(f"\n  SKU: {target_sku} (Sheet: {original_sku})  |  Portfolio: {portfolio_id}  |  {len(df_sku)} dòng")
 
         col_camp = find_col(df_sku, "Campaign Name")
         col_kw   = find_col(df_sku, "Target")
@@ -376,7 +430,7 @@ def main():
         sku_skip = 0
 
         for idx, row in df_sku.iterrows():
-            keyword_text  = str(row[col_kw]).strip()
+            raw_keyword   = str(row[col_kw]).strip()
             campaign_name = str(row[col_camp]).strip() if col_camp else ""
             note_str      = str(row[col_note]).strip() if col_note else ""
             status_val    = str(row[col_ts]).strip().lower() if col_ts else ""
@@ -387,13 +441,13 @@ def main():
                 continue
 
             # Skip dòng không có keyword
-            if not keyword_text or keyword_text.lower() == "nan":
+            if not raw_keyword or raw_keyword.lower() == "nan":
                 sku_skip += 1
                 continue
 
             # Skip dòng không có campaign name (lẽ ra đã được generate ở bước 1)
             if not campaign_name or campaign_name.lower() == "nan":
-                print(f"    [SKIP] Dòng {idx+2}: Campaign Name rỗng — '{keyword_text[:30]}'")
+                print(f"    [SKIP] Dòng {idx+2}: Campaign Name rỗng — '{raw_keyword[:30]}'")
                 sku_skip += 1
                 continue
 
@@ -403,7 +457,7 @@ def main():
 
             # ── Parse Ghi chú ────────────────────────────────────────────────
             try:
-                parsed = parse_note(note_str)
+                parsed = parse_note(note_str, campaign_name)
             except Exception as e:
                 print(f"    [SKIP] Dòng {idx+2}: Lỗi parse note '{note_str}': {e}")
                 sku_skip += 1
@@ -428,7 +482,7 @@ def main():
             block = build_7_row_block(
                 campaign_name  = campaign_name,
                 target_sku     = target_sku,
-                keyword_text   = keyword_text,
+                raw_keyword    = raw_keyword,
                 match_type     = match_type or "",
                 base_bid       = base_bid,
                 placements     = placements,

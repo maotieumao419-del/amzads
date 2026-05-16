@@ -1,0 +1,31 @@
+{
+    "seasons": [
+        { "keyword": "VALENTINE",    "event_date": "2026-02-14", "label": "Valentine's Day" },
+        { "keyword": "STPATRICK",    "event_date": "2026-03-17", "label": "St. Patrick's Day" },
+        { "keyword": "EASTER",       "event_date": "2026-04-05", "label": "Easter" },
+        { "keyword": "TEACHER",      "event_date": "2026-05-05", "label": "Teacher Appreciation Week" },
+        { "keyword": "NURSE",        "event_date": "2026-05-08", "label": "Nurse's Week" },
+        { "keyword": "MOM",          "event_date": "2026-05-11", "label": "Mother's Day" },
+        { "keyword": "MOTHERDAY",    "event_date": "2026-05-11", "label": "Mother's Day" },
+        { "keyword": "GRADUATION",   "event_date": "2026-05-15", "label": "Graduation Season" },
+        { "keyword": "MEMORIAL",     "event_date": "2026-05-25", "label": "Memorial Day" },
+        { "keyword": "FATHER",       "event_date": "2026-06-21", "label": "Father's Day" },
+        { "keyword": "DAD",          "event_date": "2026-06-21", "label": "Father's Day" },
+        { "keyword": "AMERICA",      "event_date": "2026-07-04", "label": "July 4th / America 250" },
+        { "keyword": "250_ANNI",     "event_date": "2026-07-04", "label": "July 4th / America 250" },
+        { "keyword": "PRIME",        "event_date": "2026-07-15", "label": "Prime Day" },
+        { "keyword": "BACKTOSCHOOL", "event_date": "2026-08-15", "label": "Back to School" },
+        { "keyword": "SCHOOL",       "event_date": "2026-08-15", "label": "Back to School" },
+        { "keyword": "HALLOWEEN",    "event_date": "2026-10-31", "label": "Halloween" },
+        { "keyword": "SPOOKY",       "event_date": "2026-10-31", "label": "Halloween" },
+        { "keyword": "VETERAN",      "event_date": "2026-11-11", "label": "Veterans Day" },
+        { "keyword": "THANKSGIVING", "event_date": "2026-11-26", "label": "Thanksgiving" },
+        { "keyword": "BLACKFRIDAY",  "event_date": "2026-11-27", "label": "Black Friday" },
+        { "keyword": "CHRISTMAS",    "event_date": "2026-12-25", "label": "Christmas" },
+        { "keyword": "XMAS",         "event_date": "2026-12-25", "label": "Christmas" }
+    ],
+    "thresholds": {
+        "pre_season_days": 21,
+        "post_season_days": 7
+    }
+}

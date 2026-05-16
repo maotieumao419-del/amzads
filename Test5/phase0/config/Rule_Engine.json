@@ -1,0 +1,132 @@
+{
+    "target_acos": 0.30,
+    "phase_guardrails": {
+        "launch_phase": { "max_cpc": 2.50, "min_cpc": 0.50, "target_acos": 0.50 },
+        "growth_phase": { "max_cpc": 2.00, "min_cpc": 0.40, "target_acos": 0.40 },
+        "mature_phase": { "max_cpc": 1.50, "min_cpc": 0.30, "target_acos": 0.30 },
+        "dormant_phase": { "max_cpc": 1.00, "min_cpc": 0.20, "target_acos": 0.25 },
+        "pre_season": { "max_cpc": 2.00, "min_cpc": 0.50, "target_acos": 0.35 },
+        "peak_season": { "max_cpc": 2.20, "min_cpc": 0.80, "target_acos": 0.45 },
+        "post_season": { "max_cpc": 0.20, "min_cpc": 0.10, "target_acos": 0.20 }
+    },
+    "rules": [
+        {
+            "rule_name": "Fatal_Bleeder_Zero_Sales",
+            "target_entity": "Keyword",
+            "base_conditions": {
+                "clicks_min": 15,
+                "orders_max": 0
+            },
+            "phase_overrides": {
+                "peak_season": { "clicks_min": 9 },
+                "post_season": { "clicks_min": 10 },
+                "launch_phase": { "clicks_min": 20 }
+            },
+            "action_type": "Pause"
+        },
+        {
+            "rule_name": "Poor_CVR_Underperformer",
+            "target_entity": "Keyword",
+            "base_conditions": {
+                "clicks_min": 25,
+                "orders_max": 1
+            },
+            "phase_overrides": {
+                "pre_season": { "clicks_min": 35 },
+                "peak_season": { "clicks_min": 20 }
+            },
+            "action_type": "Decrease_Bid_Percentage",
+            "action_value": 0.30
+        },
+        {
+            "rule_name": "High_Traffic_Illusion",
+            "target_entity": "Keyword",
+            "base_conditions": {
+                "impressions_min": 5000,
+                "clicks_min": 30,
+                "orders_max": 0
+            },
+            "phase_overrides": {},
+            "action_type": "Pause"
+        },
+        {
+            "rule_name": "Exact_Match_Relevance_Drop",
+            "target_entity": "Keyword",
+            "match_types": ["exact"],
+            "base_conditions": {
+                "impressions_min": 2000,
+                "clicks_max": 3,
+                "orders_max": 0
+            },
+            "phase_overrides": {},
+            "action_type": "Pause"
+        },
+        {
+            "rule_name": "Broad_Match_Discovery_Filter",
+            "target_entity": "Keyword",
+            "match_types": ["broad", "auto"],
+            "base_conditions": {
+                "impressions_min": 1000,
+                "clicks_max": 2,
+                "orders_max": 0
+            },
+            "phase_overrides": {},
+            "action_type": "Decrease_Bid_Percentage",
+            "action_value": 0.20
+        },
+        {
+            "rule_name": "High_ACOS_Bleeder",
+            "target_entity": "Keyword",
+            "base_conditions": {
+                "orders_min": 1,
+                "acos_min": 0.40
+            },
+            "phase_overrides": {
+                "peak_season": { "acos_min": 0.50 },
+                "mature_phase": { "acos_min": 0.35 },
+                "launch_phase": { "acos_min": 0.70 }
+            },
+            "action_type": "Decrease_Bid_Percentage",
+            "action_value": 0.15
+        },
+        {
+            "rule_name": "Profitable_Winner_Scale",
+            "target_entity": "Keyword",
+            "base_conditions": {
+                "orders_min": 3,
+                "acos_max": 0.20
+            },
+            "phase_overrides": {
+                "peak_season": { "acos_max": 0.25 },
+                "launch_phase": { "orders_min": 2, "acos_max": 0.30 },
+                "post_season": { "orders_min": 9999 }
+            },
+            "action_type": "Increase_Bid_Percentage",
+            "action_value": 0.20
+        },
+        {
+            "rule_name": "Dormant_High_Potential",
+            "target_entity": "Keyword",
+            "base_conditions": {
+                "impressions_max": 999,
+                "clicks_min": 3,
+                "orders_min": 2
+            },
+            "phase_overrides": {},
+            "action_type": "Increase_Bid_Absolute",
+            "action_value": 0.15
+        },
+        {
+            "rule_name": "ACOS_Borderline_Tweak",
+            "target_entity": "Keyword",
+            "base_conditions": {
+                "orders_min": 2,
+                "acos_min": 0.25,
+                "acos_max": 0.40
+            },
+            "phase_overrides": {},
+            "action_type": "Decrease_Bid_Percentage",
+            "action_value": 0.05
+        }
+    ]
+}

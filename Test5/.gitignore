@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.xlsx
+*.csv
+*.processed
+amazon_ads_history.db
+
+# Ignore input and output directories but keep the directory structure if possible
+phase_bo_sung/input/*
+phase_bo_sung/output/*
+phase0/input/*
+phase0/output/*
+database/input/*
+database/output/*
+
+# Keep .gitkeep files to maintain directory structure
+!phase_bo_sung/input/.gitkeep
+!phase_bo_sung/output/.gitkeep
+!phase0/input/.gitkeep
+!phase0/output/.gitkeep
+!database/input/.gitkeep
+!database/output/.gitkeep

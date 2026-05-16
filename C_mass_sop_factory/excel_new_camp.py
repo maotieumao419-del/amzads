@@ -40,7 +40,7 @@ OUTPUT_FILE = os.path.join(INPUT_2_DIR, "PPC_PROCESSED_OUTPUT.xlsx")
 LISTING_SHEET   = "Listing"
 PORTFOLIO_SHEET = "Portfolio ID"
 
-# Status hợp lệ trong Listing để chọn SKU cần xử lý
+# Status hợp lệ mặc định (để tham khảo)
 VALID_LISTING_STATUSES = [
     "công việc mới",
     "tiếp nhận",
@@ -85,80 +85,139 @@ def find_col(df: pd.DataFrame, col_name: str) -> str:
 
 
 def is_valid_listing_status(status_str: str) -> bool:
+    """
+    Sử dụng if-else liên tục để bao phủ các trường hợp người dùng nhập sai chính tả 
+    hoặc dùng từ đồng nghĩa trong sheet Listing.
+    """
     s = status_str.strip().lower()
-    return any(s == v for v in VALID_LISTING_STATUSES)
+    if not s:
+        return False
+        
+    # Các trường hợp hợp lệ để BẮT ĐẦU xử lý
+    if "công việc mới" in s or "new" in s or "mới" in s:
+        return True
+    elif "tiếp nhận" in s or "pending" in s or "đang xử lý" in s:
+        return True
+    elif "đã tạo" in s or "done" in s or "hoàn thành" in s or "xong" in s:
+        return True
+    elif "update" in s or "cập nhật" in s or "sửa" in s:
+        return True
+    else:
+        # Trường hợp không rõ ràng thì mặc định bỏ qua để an toàn
+        return False
 
 
 def is_active_row(trang_thai_str: str) -> bool:
     """
-    Kiểm tra xem dòng đã được tạo campaign chưa.
-    - Trả về True (Bỏ qua) nếu: 'Active', 'Done', 'Đã tạo'
-    - Trả về False (Xử lý) nếu: rỗng, 'Chưa tạo', hoặc bất kỳ giá trị nào khác.
+    Kiểm tra xem dòng trong SKU sheet đã được xử lý/chạy chưa.
+    - Trả về True (Bỏ qua) nếu dòng đó đã có trạng thái hoàn thành.
+    - Trả về False (Xử lý) nếu rỗng hoặc yêu cầu tạo mới.
     """
     s = trang_thai_str.strip().lower()
-    if s in ("active", "done", "đã tạo"):
+    
+    if not s or "chưa tạo" in s or "công việc mới" in s or "cần tạo" in s:
+        return False
+        
+    if "active" in s or "đang chạy" in s or "running" in s:
         return True
-    return False
+    elif "done" in s or "hoàn thành" in s or "xong" in s:
+        return True
+    elif "đã tạo" in s or "created" in s:
+        return True
+    elif "pause" in s or "dừng" in s or "ngừng" in s:
+        return True
+    elif "archive" in s or "xóa" in s or "lưu trữ" in s:
+        return True
+    else:
+        # Nếu ghi chú linh tinh không khớp bất kỳ rules nào nhưng có chữ, 
+        # ta tạm coi là chưa xử lý (False) để phòng hờ sót việc.
+        return False
 
 
 # =============================================================================
 # NOTE PARSER
 # =============================================================================
 
-def parse_note(note: str) -> dict:
+def parse_note(note: str, campaign_name: str = "") -> dict:
     """
-    Phân tích ô Ghi chú.
+    Phân tích Ghi chú → dict với match_type, bid, placements, placement_tag.
+    Hỗ trợ cấu trúc linh hoạt: exact_0.5_2T, exact 0.5, 2 T, Phrase 0.45, 30TRP...
     """
     note_lower = note.lower()
 
-    # 1. Match type
-    m_type = re.search(r'(?<![a-z])(exact|phrase|broad)(?![a-z])', note_lower)
-    match_type = m_type.group(1) if m_type else None
-
-    # 2. Placements
+    # 1. PLACEMENTS
     placements = {"T": 0, "R": 0, "P": 0}
     placement_tags = []
 
-    p_matches = re.findall(r'(\d+)\s*[_,]?\s*([trp]{1,3})\b', note_lower)
-    for num_str, keys_str in p_matches:
-        val = int(num_str)
-        tag_keys = ""
-        if 't' in keys_str:
-            placements["T"] = val
-            tag_keys += "T"
-        if 'r' in keys_str:
-            placements["R"] = val
-            tag_keys += "R"
-        if 'p' in keys_str:
-            placements["P"] = val
-            tag_keys += "P"
-        if tag_keys:
-            placement_tags.append(f"{val}{tag_keys}")
+    # Tìm các mẫu như "2T", "2 T", "35 TPR", "50_R_P"
+    p_matches = list(re.finditer(r'(\d+(?:\.\d+)?)\s*[_,]?\s*([tpr][tpr\s_,]*)(\b|$)', note_lower))
+    for match in p_matches:
+        num_str = match.group(1)
+        keys_str = match.group(2).replace(' ', '').replace('_', '').replace(',', '')
+        
+        # Đảm bảo phần chữ chỉ chứa t, r, p
+        if set(keys_str).issubset(set('trp')):
+            val = int(float(num_str))
+            tag_keys = ""
+            if 't' in keys_str: placements["T"] = val; tag_keys += "T"
+            if 'r' in keys_str: placements["R"] = val; tag_keys += "R"
+            if 'p' in keys_str: placements["P"] = val; tag_keys += "P"
+            
+            if tag_keys:
+                placement_tags.append(f"{val}{tag_keys}")
+            
+            # Xóa phần placement khỏi note_lower để tránh nhận diện nhầm thành bid
+            note_lower = note_lower.replace(match.group(0), ' ')
 
-    seen_tags = set()
-    unique_tags = []
-    for tag in placement_tags:
-        if tag not in seen_tags:
-            seen_tags.add(tag)
-            unique_tags.append(tag)
-    placement_tag = "_".join(unique_tags) if unique_tags else "00T"
+    # Format dạng [T: 0 / P: 0 / R: 0]
+    p_new = list(re.finditer(r'([tpr])\s*:\s*(\d+)', note_lower))
+    for match in p_new:
+        k = match.group(1)
+        v = int(match.group(2))
+        if k == 't': placements["T"] = v
+        if k == 'r': placements["R"] = v
+        if k == 'p': placements["P"] = v
+        note_lower = note_lower.replace(match.group(0), ' ')
 
-    # 3. Bid
-    bid = DEFAULT_BID
-    bid_new = re.search(r'(\d+(?:\.\d+)?)\s*[đĐ]', note)
-    if bid_new:
-        bid = float(bid_new.group(1))
+    placement_tag = "_".join(dict.fromkeys(placement_tags)) if placement_tags else "00T"
+
+    # 2. MATCH TYPE
+    if "exact" in note_lower or "ex" in note_lower:
+        match_type = "exact"
+    elif "phrase" in note_lower or "ph" in note_lower:
+        match_type = "phrase"
+    elif "broad" in note_lower or "br" in note_lower:
+        match_type = "broad"
+    elif "targeting" in note_lower or "pt" in note_lower or "asin" in note_lower:
+        match_type = "targeting"
+    elif "auto" in note_lower or "au" in note_lower:
+        match_type = "auto"
     else:
-        note_norm = note.replace('_', ' ')
-        floats = [float(x) for x in re.findall(r'\d+\.\d+', note_norm)]
-        for f in floats:
-            if f < 10:
-                bid = f
-                break
-        else:
-            b = re.search(r'(?i)bid\s*(\d+(?:\.\d+)?)', note)
-            if b:
-                bid = float(b.group(1))
+        match_type = "unknown"
+
+    # 3. BID
+    bid = DEFAULT_BID
+    bid_found = False
+    
+    # Tìm tất cả các số còn lại trong chuỗi (sau khi đã xóa placement)
+    floats = re.findall(r'(\d+(?:\.\d+)?)', note_lower)
+    for f_str in floats:
+        f = float(f_str)
+        # Thông thường bid < 30 và > 0
+        if 0 < f < 30:
+            bid = f
+            bid_found = True
+            break
+
+    # Fallback to campaign_name if no explicit bid found in note
+    if not bid_found and campaign_name:
+        # Tìm số thập phân trong Campaign Name, ví dụ: _0.33 hoặc _0.3_070825
+        camp_floats = [float(x) for x in re.findall(r'_(\d+\.\d+)(?:_|$)', campaign_name)]
+        if camp_floats:
+            for f in reversed(camp_floats): # Lấy số cuối cùng thỏa mãn < 10
+                if f < 10:
+                    bid = f
+                    break
 
     return {
         "match_type":    match_type,
@@ -173,17 +232,19 @@ def parse_note(note: str) -> dict:
 # =============================================================================
 
 def build_campaign_name(sku: str, type_code: str, match_type: str,
-                        target: str, placement_tag: str) -> str:
+                        raw_keyword: str, placement_tag: str) -> str:
     """
     Tạo tên Campaign độc nhất.
-    Format: [SKU]_[LoaiCamp]_[match_type]_[Target]_[Placement]
+    Format: [SKU]_[LoaiCamp]_[match_type]_[RAW_KEYWORD]_[Placement]
     """
     mt = match_type if match_type else "unknown"
-    # Clean target: bỏ ký tự đặc biệt, lấy tối đa 3 từ hoặc 30 ký tự để tên không quá dài
-    clean_target = re.sub(r'[^\w\s-]', '', target).strip()
-    target_slug = "_".join(clean_target.split()[:5]) # Lấy tối đa 5 từ đầu
+    # Clean raw_keyword: bỏ ký tự đặc biệt, lấy tối đa 3 từ hoặc 30 ký tự để tên không quá dài
+    clean_keyword = re.sub(r'[^\w\s-]', '', raw_keyword).strip()
     
-    return f"{sku}_{type_code}_{mt}_{target_slug}_{placement_tag}"
+    # Bỏ replace(" ", "_"), giữ nguyên dấu cách trong Keyword
+    keyword_slug = " ".join(clean_keyword.split()[:5]) # Lấy tối đa 5 từ đầu, CÓ DẤU CÁCH
+    
+    return f"{sku}_{type_code}_{mt}_{keyword_slug}_{placement_tag}"
 
 
 # =============================================================================
@@ -207,23 +268,47 @@ def step1_load_listing(xls: pd.ExcelFile) -> list[dict]:
     print(f"  Columns: {list(df.columns)}")
     print(f"  Status values: {df[col_status].unique().tolist()}")
 
-    results = []
+    # Dùng dictionary để gộp các SKU trùng lặp
+    sku_dict = {}
     for _, row in df.iterrows():
         sku    = str(row[col_sku]).replace("\n", "").strip()
         status = str(row[col_status]).strip()
 
         if not sku or sku.lower() == "nan":
             continue
-        if not is_valid_listing_status(status):
-            print(f"  [SKIP] '{sku}': Status='{status}' → bỏ qua")
-            continue
 
         pid   = str(row[col_pid]).strip() if col_pid else ""
         store = str(row[col_store]).strip() if col_store else ""
-        results.append({"sku": sku, "portfolio_id": pid, "store": store})
-        print(f"  [OK] {sku!r:42s}  Portfolio={pid}  Status='{status}'")
 
-    print(f"\n  → Tổng SKU cần xử lý: {len(results)}")
+        if sku not in sku_dict:
+            sku_dict[sku] = {
+                "sku": sku, 
+                "portfolio_id": pid, 
+                "store": store, 
+                "statuses": [status]
+            }
+        else:
+            sku_dict[sku]["statuses"].append(status)
+            # Nếu portfolio_id rỗng ở dòng trước, cập nhật nếu dòng này có
+            if not sku_dict[sku]["portfolio_id"] and pid:
+                sku_dict[sku]["portfolio_id"] = pid
+
+    results = []
+    for sku, info in sku_dict.items():
+        # Kiểm tra xem có BẤT KỲ status nào hợp lệ không
+        valid_status = None
+        for s in info["statuses"]:
+            if is_valid_listing_status(s):
+                valid_status = s
+                break
+                
+        if valid_status is not None:
+            results.append({"sku": sku, "portfolio_id": info["portfolio_id"], "store": info["store"]})
+            print(f"  [OK] {sku!r:42s}  Portfolio={info['portfolio_id']}  Status='{valid_status}' (Gộp từ {len(info['statuses'])} dòng)")
+        else:
+            print(f"  [SKIP] '{sku}': Statuses={info['statuses']} → bỏ qua")
+
+    print(f"\n  → Tổng SKU cần xử lý (Unique): {len(results)}")
     return results
 
 
@@ -268,17 +353,46 @@ def step2_validate_portfolio(xls: pd.ExcelFile, sku_rows: list[dict]) -> None:
 #   - Target multi-line → tách thành nhiều dòng riêng
 # =============================================================================
 
-def step3_load_sku_sheet(xls: pd.ExcelFile, sku: str) -> pd.DataFrame:
+def step3_load_sku_sheet(xls: pd.ExcelFile, sku: str, sheet_name: str = None) -> pd.DataFrame:
     """
     Đọc sheet SKU:
-    1. Forward-fill Ghi chú / Campaign Name / Loại Campaign theo nhóm
-       *** Trạng thái KHÔNG ffill — rỗng = dòng mới, Active/Done = đã tạo ***
-    2. SKIP dòng có Trạng thái = Active/Done
-    3. Tách Target multi-line
-    4. Parse Ghi chú → Campaign Name
+    1. Tự động nhận diện dòng Header (chống lỗi do dòng Full SKU ở trên cùng).
+    2. Forward-fill STT / Ghi chú / Loại Campaign theo nhóm.
+    3. SKIP dòng có Trạng thái = Active/Done.
+    4. Tách Target multi-line.
+    5. Parse Ghi chú → Campaign Name.
     """
-    df_raw = pd.read_excel(xls, sheet_name=sku, dtype=str)
-    df_raw.columns = df_raw.columns.str.strip()
+    if sheet_name is None:
+        sheet_name = sku
+    df_raw = pd.read_excel(xls, sheet_name=sheet_name, dtype=str)
+    
+    # --- CHUẨN HÓA CẤU TRÚC SHEET (DYNAMIC HEADER DETECTION) ---
+    # Kiểm tra xem header chuẩn có nằm ngay ở df_raw.columns không?
+    has_target = False
+    for c in df_raw.columns:
+        if "target" in str(c).strip().lower():
+            has_target = True
+            break
+            
+    if not has_target:
+        # Nếu không có, quét 5 dòng đầu của data để tìm dòng thực sự chứa Header
+        header_row_idx = -1
+        for idx, row in df_raw.head(5).iterrows():
+            row_str = " ".join([str(x).lower() for x in row.values])
+            if "target" in row_str and "stt" in row_str:
+                header_row_idx = idx
+                break
+                
+        if header_row_idx != -1:
+            # Lấy dòng đó làm header
+            df_raw.columns = df_raw.iloc[header_row_idx].astype(str).str.strip()
+            # Lấy dữ liệu từ dòng bên dưới header trở đi
+            df_raw = df_raw.iloc[header_row_idx + 1:].reset_index(drop=True)
+        else:
+            raise ValueError(f"Không tìm thấy dòng Header chứa cột 'Target' trong sheet {sku}")
+    else:
+        df_raw.columns = df_raw.columns.str.strip()
+
     df_raw.fillna("", inplace=True)
 
     col_target = find_col(df_raw, COL_TARGET)
@@ -304,9 +418,12 @@ def step3_load_sku_sheet(xls: pd.ExcelFile, sku: str) -> pd.DataFrame:
         type_code = TYPE_CODE_MAP.get(first_type.strip().lower(), "KT")
     print(f"  [INFO] Loại Campaign = '{first_type if col_type else '?'}'  →  type_code='{type_code}'")
 
-    # ── 3b. Forward-fill Ghi chú / Loại Campaign ───────────
-    # Ghi chú và Loại Campaign được share trong 1 nhóm dòng → cần ffill.
+    # ── 3b. Forward-fill STT / Ghi chú / Loại Campaign ───────────
+    # STT, Ghi chú và Loại Campaign được share trong 1 nhóm dòng → cần ffill.
     # !! Campaign Name và Trạng thái KHÔNG ffill để đảm bảo tính độc nhất !!
+    if col_stt:
+        df_raw[col_stt] = df_raw[col_stt].replace("", None).ffill().fillna("")
+        
     if col_note:
         df_raw[col_note] = df_raw[col_note].replace("", None).ffill().fillna("")
 
@@ -333,9 +450,10 @@ def step3_load_sku_sheet(xls: pd.ExcelFile, sku: str) -> pd.DataFrame:
             continue
 
         note_val = str(row[col_note]).strip() if col_note else ""
+        camp_val = str(row[col_camp]).strip() if col_camp else ""
         
         # Parse note để lấy placement_tag và match_type
-        parsed = parse_note(note_val)
+        parsed = parse_note(note_val, camp_val)
 
         for kw in keywords:
             new_row = row.copy()
@@ -350,7 +468,7 @@ def step3_load_sku_sheet(xls: pd.ExcelFile, sku: str) -> pd.DataFrame:
                 sku           = sku,
                 type_code     = type_code,
                 match_type    = parsed["match_type"] or "unknown",
-                target        = kw,
+                raw_keyword   = kw,
                 placement_tag = parsed["placement_tag"],
             )
 
@@ -363,14 +481,20 @@ def step3_load_sku_sheet(xls: pd.ExcelFile, sku: str) -> pd.DataFrame:
 
     df_out = pd.DataFrame(expanded_rows, columns=df_raw.columns)
     df_out = df_out.reset_index(drop=True)
-    # Đánh lại STT
-    if col_stt:
-        df_out[col_stt] = range(1, len(df_out) + 1)
-    else:
-        df_out.insert(0, COL_STT, range(1, len(df_out) + 1))
+
+    # Lọc 6 cột chuẩn
+    out_cols = ["STT", "Campaign Name", "Loại Campaign", "Target", "Note", "Trạng thái"]
+    df_final = pd.DataFrame(columns=out_cols)
+
+    df_final["STT"] = df_out[col_stt] if col_stt else range(1, len(df_out) + 1)
+    df_final["Campaign Name"] = df_out[col_camp] if col_camp else ""
+    df_final["Loại Campaign"] = df_out[col_type] if col_type else ""
+    df_final["Target"] = df_out[col_target] if col_target else ""
+    df_final["Note"] = df_out[col_note] if col_note else ""
+    df_final["Trạng thái"] = df_out[col_ts] if col_ts else ""
 
     print(f"  [BƯỚC 3] SKU '{sku}': skip_active={skip_active} | new_keywords={new_rows} dòng")
-    return df_out
+    return df_final
 
 
 # =============================================================================
@@ -425,11 +549,16 @@ def main():
     for item in sku_rows:
         sku = item["sku"]
         print(f"\n  --- SKU: {sku} ---")
+        
+        target_sheet = sku
         if sku not in available_sheets:
-            print(f"  [WARN] Không có sheet tương ứng → Bỏ qua.")
-            continue
+            if sku[:31] in available_sheets:
+                target_sheet = sku[:31]
+            else:
+                print(f"  [WARN] Không có sheet tương ứng → Bỏ qua.")
+                continue
         try:
-            df_result = step3_load_sku_sheet(xls, sku)
+            df_result = step3_load_sku_sheet(xls, sku, sheet_name=target_sheet)
         except Exception as e:
             print(f"  [ERROR] {e} → Bỏ qua.")
             continue
@@ -453,12 +582,36 @@ def main():
             with pd.ExcelWriter(OUTPUT_FILE, engine="xlsxwriter") as writer:
                 for sku, df in processed_results.items():
                     sheet_name = sku[:31]
-                    df.to_excel(writer, sheet_name=sheet_name, index=False)
+                    # Xuất data từ dòng 3 (startrow=2), bỏ qua header mặc định
+                    df.to_excel(writer, sheet_name=sheet_name, index=False, header=False, startrow=2)
                     workbook  = writer.book
                     worksheet = writer.sheets[sheet_name]
+
+                    # 1. Row 1: Tiêu đề Sheet gộp A1:F1
+                    format_title = workbook.add_format({
+                        'bold': True, 'font_size': 14, 'align': 'center', 'valign': 'vcenter'
+                    })
+                    worksheet.merge_range('A1:F1', sku, format_title)
+
+                    # 2. Row 2: Tiêu đề Cột
+                    format_header = workbook.add_format({'bold': True, 'border': 1})
+                    format_note_header = workbook.add_format({'bold': True, 'border': 1, 'bg_color': '#ACD1EC'})
+
+                    headers = df.columns.tolist()
+                    for col_num, value in enumerate(headers):
+                        if value == 'Note':
+                            worksheet.write(1, col_num, value, format_note_header)
+                        else:
+                            worksheet.write(1, col_num, value, format_header)
+
+                    # 3. Chỉnh kích thước cột
                     text_fmt  = workbook.add_format({"num_format": "@"})
-                    for col_idx in range(len(df.columns)):
-                        worksheet.set_column(col_idx, col_idx, 30, text_fmt)
+                    worksheet.set_column(0, 0, 5, text_fmt)   # STT
+                    worksheet.set_column(1, 1, 40, text_fmt)  # Campaign Name
+                    worksheet.set_column(2, 2, 20, text_fmt)  # Loại Campaign
+                    worksheet.set_column(3, 3, 20, text_fmt)  # Target
+                    worksheet.set_column(4, 4, 35, text_fmt)  # Note
+                    worksheet.set_column(5, 5, 12, text_fmt)  # Trạng thái
             print(f"\n  [OK] Đã lưu: {OUTPUT_FILE}")
             break
         except PermissionError:

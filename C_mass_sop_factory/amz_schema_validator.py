@@ -19,9 +19,11 @@ import pandas as pd
 # ---------------------------------------------------------------------------
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Xác định thư mục chứa file. Vì mass_sop_factory.py lưu output vào data/output
-# ta sẽ kiểm tra cả thư mục script và thư mục output.
+# Thư mục chứa file output để quét các file Bulk_*
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "data", "output")
+
+# Thư mục chứa file template mẫu (data/input)
+INPUT_DIR = os.path.join(SCRIPT_DIR, "data", "input")
 
 # Tên file template chuẩn
 TEMPLATE_FILENAME = "mass_sop_part_1.xlsx"
@@ -63,13 +65,14 @@ def find_file_in_dirs(filename: str, dirs_to_search: list) -> str:
 def main():
     print("=== AMZ BULKSHEET SCHEMA VALIDATOR ===")
     
-    # 1. Tìm file template chuẩn (thử tìm ở SCRIPT_DIR, sau đó là OUTPUT_DIR)
-    search_dirs = [SCRIPT_DIR, OUTPUT_DIR]
-    template_path = find_file_in_dirs(TEMPLATE_FILENAME, search_dirs)
+    # 1. Tìm file template chuẩn (ưu tiên tìm ở data/input, sau đó SCRIPT_DIR)
+    template_search_dirs = [INPUT_DIR, SCRIPT_DIR]
+    template_path = find_file_in_dirs(TEMPLATE_FILENAME, template_search_dirs)
     
     if not template_path:
         print(f"[LỖI] Không tìm thấy file template chuẩn: '{TEMPLATE_FILENAME}'")
-        print(f"Đã tìm trong: {search_dirs}")
+        print(f"Đã tìm trong: {template_search_dirs}")
+        print(f"→ Hãy đặt file '{TEMPLATE_FILENAME}' vào thư mục: {INPUT_DIR}")
         return
 
     # Lấy tập hợp cột của template
@@ -80,20 +83,17 @@ def main():
 
     print(f"Baseline Template: {TEMPLATE_FILENAME} loaded. Total columns: {len(template_cols)}\n")
 
-    # 2. Tìm tất cả các file target có tiền tố Bulk_
-    # Quét cả ở trong SCRIPT_DIR và OUTPUT_DIR để đảm bảo không bỏ sót
+    # 2. Tìm tất cả các file target có tiền tố Bulk_ trong data/output
     target_files = []
-    for d in search_dirs:
-        if os.path.exists(d):
-            # Tìm *.xlsx và *.csv
-            target_files.extend(glob.glob(os.path.join(d, "Bulk_*.xlsx")))
-            target_files.extend(glob.glob(os.path.join(d, "Bulk_*.csv")))
+    if os.path.exists(OUTPUT_DIR):
+        target_files.extend(glob.glob(os.path.join(OUTPUT_DIR, "Bulk_*.xlsx")))
+        target_files.extend(glob.glob(os.path.join(OUTPUT_DIR, "Bulk_*.csv")))
     
     # Xóa trùng lặp nếu có (dựa theo đường dẫn)
     target_files = list(set(target_files))
     
     if not target_files:
-        print("[ẢNH BÁO] Không tìm thấy file output nào có tiền tố 'Bulk_' để đối chiếu.")
+        print(f"[CẢNH BÁO] Không tìm thấy file nào có tiền tố 'Bulk_' trong: {OUTPUT_DIR}")
         return
 
     # Sắp xếp để log dễ nhìn hơn
