@@ -1,120 +1,127 @@
 # main.py
+"""
+Pipeline chính cho UI Dashboard.
 
-import pandas as pd
-import glob
+Luồng:
+  1. Tìm file PPC_*_UPDATED.xlsx mới nhất từ D_auto_bulk_updater/data/final_xlsx/
+  2. Đọc và parse toàn bộ dữ liệu (keyword-level + date blocks)
+  3. Tổng hợp lên campaign-level
+  4. Build Dashboard Excel đa sheet
+  5. Xuất ra UI/data/output/AMZ_Interactive_Dashboard.xlsx
+"""
+
 import os
+import sys
+import pandas as pd
+from datetime import datetime
+
+# Thêm thư mục UI vào path để import được các module
+UI_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, UI_DIR)
+
+from ui_data_prep import (
+    find_latest_updated_file,
+    load_ppc_updated,
+    aggregate_campaigns,
+    aggregate_campaign_ts,
+)
 from ui_builder import build_interactive_dashboard
+from config import INPUT_SUBPATH, INPUT_PATTERN, OUTPUT_SUBPATH, OUTPUT_FILE
+
 
 def main():
-    print("=== BẮT ĐẦU PIPELINE ETL & DASHBOARD GENERATOR ===")
-    
-    # Định nghĩa thư mục Input chứa các file cập nhật mới nhất
-    # Trỏ về folder D_auto_bulk_updater/data/final_xlsx/
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    data_dir = os.path.join(BASE_DIR, "D_auto_bulk_updater", "data", "final_xlsx")
-    
-    # 1. Pipeline ETL: Tìm các file khớp pattern "PPC_*_UPDATED"
-    pattern = os.path.join(data_dir, "PPC_*_UPDATED*.xlsx")
-    files = glob.glob(pattern)
-    
-    if not files:
-        print(f"❌ Lỗi: Không tìm thấy file nào khớp pattern tại {pattern}")
-        print("Vui lòng đảm bảo các file PPC_..._UPDATED.xlsx đã có trong D:/data/final_xlsx/")
+    print("=" * 60)
+    print("  AMAZON ADS DASHBOARD GENERATOR")
+    print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("=" * 60)
+
+    # ── 1. Xác định đường dẫn ─────────────────────────────────────────────
+    BASE_DIR = os.path.dirname(UI_DIR)   # TEST/
+    data_dir = os.path.join(BASE_DIR, "D_auto_bulk_updater", INPUT_SUBPATH)
+
+    if not os.path.exists(data_dir):
+        # Fallback: tìm trong thư mục hiện tại
+        data_dir = os.path.join(UI_DIR, "data", "input")
+        os.makedirs(data_dir, exist_ok=True)
+        print(f"  Th mc D_auto_bulk_updater khng tm thy.")
+        print(f"   ang tm trong: {data_dir}")
+
+    # ── 2. Tìm file mới nhất ──────────────────────────────────────────────
+    file_path = find_latest_updated_file(data_dir, INPUT_PATTERN)
+
+    if not file_path:
+        print(f"\n Khng tm thy file PPC_*_UPDATED.xlsx no trong:")
+        print(f"   {data_dir}")
+        print("\nHng dn:")
+        print("  1. Chy D_auto_bulk_updater/main_pipeline.py trc")
+        print("  2. Hoc copy file PPC_*_UPDATED.xlsx vo th mc trn")
         return
-        
-    all_data = []
-    # Loại bỏ các sheet không chứa dữ liệu SKU thực tế
-    exclude_sheets = ['Listing', 'Portfolio ID', 'Sheet1', 'Sheet2'] 
-    
-    print(f"Tìm thấy {len(files)} file cần xử lý...")
-    
-    for file_path in files:
-        print(f"Đang trích xuất: {os.path.basename(file_path)}")
-        try:
-            xl = pd.ExcelFile(file_path, engine='openpyxl')
-            for sheet_name in xl.sheet_names:
-                if sheet_name in exclude_sheets:
-                    continue
-                    
-                # Đọc tạm để tìm header row
-                temp_df = pd.read_excel(file_path, sheet_name=sheet_name, engine='openpyxl', header=None)
-                header_row_idx = None
-                
-                # Tự động dò tìm dòng chứa 'Campaign Name' hoặc 'STT'
-                for idx, row in temp_df.iterrows():
-                    row_str = ' '.join([str(val) for val in row.values if pd.notna(val)])
-                    if 'Campaign Name' in row_str or 'STT' in row_str:
-                        header_row_idx = idx
-                        break
-                
-                if header_row_idx is None:
-                    print(f"Bỏ qua sheet {sheet_name}: Không tìm thấy dòng Header.")
-                    continue
-                
-                # Đọc lại với header chính xác
-                df = pd.read_excel(file_path, sheet_name=sheet_name, engine='openpyxl', header=header_row_idx)
-                
-                # Xóa khoảng trắng thừa trong tên cột
-                df.columns = df.columns.str.strip()
-                
-                # LỌC FILE RỖNG
-                if 'Spend' not in df.columns or 'Sales' not in df.columns:
-                    print(f"Bỏ qua sheet {sheet_name}: Thiếu cột Spend hoặc Sales.")
-                    continue
-                
-                # Ép kiểu dữ liệu (to_numeric) và fill NaN
-                numeric_cols = ['Impressions', 'Clicks', 'Spend', 'Sales', 'Orders']
-                for col in numeric_cols:
-                    if col in df.columns:
-                        df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
-                
-                # Thêm cột SKU vào đầu tiên
-                df.insert(0, 'SKU', sheet_name)
-                    
-                all_data.append(df)
-        except Exception as e:
-            print(f"❌ Lỗi khi đọc file {file_path}: {e}")
-            
-    if not all_data:
-        print("❌ Không có dữ liệu hợp lệ nào được trích xuất.")
+
+    file_name = os.path.basename(file_path)
+    print(f"\n[FILE] File nguon: {file_name}")
+
+    # ── 3. ETL: Đọc và xử lý dữ liệu ─────────────────────────────────────
+    print("\n ang c v x l d liu...")
+    etl = load_ppc_updated(file_path)
+
+    df_kw    = etl['df_kw']
+    df_kw_ts = etl['df_kw_ts']
+    date_blocks = etl['date_blocks']
+    skus     = etl['skus']
+
+    if df_kw.empty:
+        print(" Khng c d liu hp l t file. Kim tra li file input.")
         return
-        
-    # Gộp toàn bộ dữ liệu thành 1 Master DataFrame (Data Layer)
-    df_merged = pd.concat(all_data, ignore_index=True)
-    
-    # Thực hiện reset_index sau khi concat
-    df_merged.reset_index(drop=True, inplace=True)
-    
-    # Loại bỏ các cột 'Unnamed' hoặc cột chỉ chứa giá trị rỗng
-    df_merged.dropna(how='all', axis=1, inplace=True)
-    df_merged = df_merged.loc[:, ~df_merged.columns.str.contains('^Unnamed', case=False, na=False)]
-    
-    # Đảm bảo cột SKU luôn nằm ở vị trí đầu tiên (index 0)
-    cols = ['SKU'] + [c for c in df_merged.columns if c != 'SKU']
-    df_merged = df_merged[cols]
-    
-    print(f"✅ Đã gộp thành công {len(df_merged)} dòng dữ liệu từ tất cả các SKU.")
-    
-    # 2. Xây dựng Dashboard
-    # Ghi vào thư mục UI/data/output
-    ui_dir = os.path.dirname(os.path.abspath(__file__))
-    out_dir = os.path.join(ui_dir, "data", "output")
-    if not os.path.exists(out_dir):
-        os.makedirs(out_dir)
-        
-    out_file = os.path.join(out_dir, "AMZ_Interactive_Dashboard.xlsx")
-    print(f"Đang sinh file Dashboard Client-Side Rendering...")
-    
-    writer = pd.ExcelWriter(out_file, engine='xlsxwriter')
+
+    print(f"   OK: {len(df_kw)} keyword/target tu {len(skus)} SKU")
+    print(f"   Ky ngay: {', '.join(date_blocks) if date_blocks else 'Khong xac dinh'}")
+
+    # ── 4. Tổng hợp Campaign-level ────────────────────────────────────────
+    print("\n[CAMP] Dang tong hop du lieu Campaign...")
+    df_camp = aggregate_campaigns(df_kw)
+    print(f"   OK: {len(df_camp)} campaigns")
+
+    # ── 5. Time-series Campaign cho Sparklines ────────────────────────────
+    df_camp_ts = None
+    if date_blocks and not df_kw_ts.empty:
+        print(f"\n[TS] Dang tao Time-Series data ({len(date_blocks)} ky)...")
+        df_camp_ts = aggregate_campaign_ts(df_kw_ts, date_blocks)
+        if not df_camp_ts.empty:
+            print(f"   OK: {len(df_camp_ts)} campaigns x {len(date_blocks)} ky")
+
+    # ── 6. Build Dashboard ────────────────────────────────────────────────
+    out_dir = os.path.join(UI_DIR, OUTPUT_SUBPATH)
+    os.makedirs(out_dir, exist_ok=True)
+    out_file = os.path.join(out_dir, OUTPUT_FILE)
+
+    print(f"\n[BUILD] Dang tao Dashboard Excel...")
+
+    writer   = pd.ExcelWriter(out_file, engine='xlsxwriter')
     workbook = writer.book
-    
-    build_interactive_dashboard(workbook, writer, df_merged)
-    
+
+    etl_result = {
+        'df_kw':       df_kw,
+        'df_kw_ts':    df_kw_ts,
+        'df_camp':     df_camp,
+        'df_camp_ts':  df_camp_ts,
+        'date_blocks': date_blocks,
+        'skus':        skus,
+        'file_name':   file_name,
+    }
+
+    build_interactive_dashboard(workbook, writer, etl_result)
+
     writer.close()
-    
-    print(f"=== HOÀN TẤT ===")
-    print(f"✅ File Output đã sẵn sàng: {out_file}")
-    print(f"Mở file lên và sử dụng Menu Dropdown ở ô B2/B3 để tương tác phân tích dữ liệu.")
+
+    # ── 7. Done ───────────────────────────────────────────────────────────
+    size_kb = os.path.getsize(out_file) // 1024
+    print(f"\n{'=' * 60}")
+    print(f"HOAN TAT!")
+    print(f"   File: {out_file}")
+    print(f"   Kich thuoc: {size_kb} KB")
+    print(f"   Sheets: OVERVIEW | CAMPAIGNS | KEYWORDS | DEEP DIVE")
+    print(f"{'=' * 60}\n")
+
 
 if __name__ == "__main__":
     main()

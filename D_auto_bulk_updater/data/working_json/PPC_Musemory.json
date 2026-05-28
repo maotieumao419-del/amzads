@@ -38,7 +38,7 @@
       "Link": "https://www.amazon.com/dp/B0GWRC6XR9",
       "Portfolio Id": "212170875998610",
       "Portfolio Name": "CARD FATHER'S DAY",
-      "Status": "Đã tạo Campaign"
+      "Status": "Công việc Mới"
     },
     {
       "STT": "6",
@@ -328,7 +328,7 @@
       "Link": "",
       "Portfolio Id": "243477825309241",
       "Portfolio Name": "BOARD_BACK TO SCHOOL",
-      "Status": ""
+      "Status": "Đã tạo Campaign"
     },
     {
       "STT": "",
@@ -549,6 +549,16 @@
       "Portfolio Id": "107414314064893",
       "Portfolio Name": "ISMELLSNOW_ELPHANT_NURSE",
       "Status": ""
+    },
+    {
+      "STT": "56",
+      "SKU": "B0F9PGKBX2",
+      "Ảnh": "",
+      "Store": "Musemory",
+      "Link": "https://www.amazon.com/dp/B0F9PGKBX2?th=1",
+      "Portfolio Id": "88958883595750",
+      "Portfolio Name": "B0F9PGKBX2_POSITIVEJAR_TURTLE",
+      "Status": "Công việc Mới"
     }
   ],
   "Portfolio ID": [
@@ -1381,1550 +1391,6 @@
         "Loại Campaign": "Keyword (Từ khóa)",
         "Target": "i love you mom",
         "Ghi chú": "[[Exact]-[0.64]-[10T-10R-10P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      }
-    ]
-  },
-  "FATHERDAY_DADHAT": {
-    "sku_title": "SKU: FATHERDAY_DADHAT",
-    "base_headers": [
-      "STT",
-      "Campaign Name",
-      "Loại Campaign",
-      "Target",
-      "Ghi chú",
-      "Status"
-    ],
-    "date_blocks": [],
-    "rows": [
-      {
-        "STT": 1,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_phrase_dad trucker hat_30TRP",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "dad trucker hat",
-        "Ghi chú": "[[Phrase]-[0.98]-[30T-30R-30P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 2,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CQKXB53D\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 3,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CT8NXW8C\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 4,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0GKYNQ6LF\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 5,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D6F8HND2\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 6,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FNC2ZW39\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 7,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CQFXJM6H\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 8,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FDKLK7VD\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 9,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CD193V6B\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 10,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DFQ6X5M8\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 11,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FG7JJD6J\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 12,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F23N1R59\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 13,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0C1NT1GH3\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 14,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CY9X78QK\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 15,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CT8R7GBJ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 16,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F24494RL\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 17,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FX3W6D5B\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 18,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DGCT379Q\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 19,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CVS5CGPB\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 20,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F5P1CZ5X\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 21,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DRRZ3DS2\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 22,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D31YYQN3\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 23,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DB16X5WB\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 24,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CJFBCPRN\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 25,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D3KWHY52\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 26,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CQFYXS63\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 27,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DH3623MD\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 28,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F7RW5MC8\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 29,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FF2K45HK\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 30,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FLTKPLK2\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 31,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DBV415GJ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 32,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F24FTLV9\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 33,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FRSDZ67N\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 34,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CKC2YDPC\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 35,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D4HN25PR\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 36,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F7XN7N61\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 37,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D97WMTRT\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 38,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CKC1LRQF\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 39,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DRX1RC24\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 40,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DQ15YFLL\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 41,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FG2PRWC7\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 42,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DTYNXBKX\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 43,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F7GWSDDR\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 44,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DRWX6BJZ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 45,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FK5HT3R5\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 46,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0BJZQMPQ1\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 47,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FYML9MFV\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 48,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FNDS7PN3\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 49,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F82XXZ86\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 50,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DXZP2LFY\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 51,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CWTPN25W\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 52,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F13LRRVV\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 53,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0BZ3WYSB5\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 54,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DQVFKPPL\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 55,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CSSNQSGR\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 56,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D4DC1M17\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 57,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CD1LF57G\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 58,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DWM8S517\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 59,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F5P1D6K9\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 60,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CY9Q7Z59\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 61,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CQKYJ5RC\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 62,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FF2MHQ9S\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 63,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DJ8QGG7C\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 64,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DB2W8G66\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 65,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F99QG8B8\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 66,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D97J41NP\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 67,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0C13YQKY6\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 68,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0C167XJS1\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 69,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D2XTMZ3G\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 70,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FK5GM5MN\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 71,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F1F72D9K\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 72,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D3648ZHW\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 73,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FH2JYBQK\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 74,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D363Y1ZX\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 75,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FNLCJB96\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 76,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D95YCJTZ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 77,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0BTKNXQZK\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 78,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FPWZ7W74\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 79,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DRS368WJ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 80,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F99MQDCG\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 81,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B09YCMKGVT\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 82,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0BHSJPFXY\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 83,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F13J2Y86\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 84,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FFH845XD\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 85,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0G6CZFVYG\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 86,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F89YZVHP\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 87,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F23WWL5K\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 88,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0GM9LG5X7\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 89,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DXKX4RWX\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 90,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CSCWLBXF\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 91,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D95YGK98\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 92,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DSPVLMZZ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 93,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DZNPXL5V\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 94,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FLTKG5WR\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 95,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F23XKSMJ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 96,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DWFDH47Z\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 97,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F2YTXMNX\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 98,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0GH1ZB283\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 99,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DC5XK8L3\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 100,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DJGGJ34S\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 101,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F5P62L76\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 102,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FHP7XJPY\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 103,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0BZ8HZFN3\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 104,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DNM63LVN\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 105,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FKGL7THC\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 106,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FH2FF2PZ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 107,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FJLXDFC9\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 108,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FKGND3HJ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 109,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0C2DW1H44\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 110,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FDJQ7T79\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 111,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FYGXC65P\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 112,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D1VRW264\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 113,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0C3BVJ4N5\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 114,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FH9SLV77\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 115,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CCVK26MW\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 116,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FQZWG1Z9\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 117,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CD1214KQ\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 118,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin-expanded=\"B0CSSNQSGR\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 119,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FRZ31759\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 120,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FQMRLSJM\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 121,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CKC2MHB6\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 122,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FHDCJ78N\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 123,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CDRXMXR2\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 124,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0GMD3LCXF\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 125,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_0.56",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F4DX33VY\"",
-        "Ghi chú": "[[targeting]-[0.56]-[10T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 126,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_phrase_mens trucker hat_30TRP",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "mens trucker hat",
-        "Ghi chú": "[[Phrase]-[0.79]-[30T-30R-30P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 127,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_broad_dad trucker hat_20TRP",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "dad trucker hat",
-        "Ghi chú": "[[Broad]-[0.3]-[20T-20R-20P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 128,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D3648ZHW\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 129,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DJ8SHZV9\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 130,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0C2DW1H44\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 131,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CSSNQSGR\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 132,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B09YCMKGVT\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 133,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FR9JXRB7\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 134,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DRRZ3DS2\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 135,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CSM2KBFV\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 136,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DB16X5WB\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 137,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D95YGK98\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 138,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F7XN7N61\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 139,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D97WMTRT\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 140,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CD1214KQ\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 141,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D4DC1M17\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 142,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FKGL7THC\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 143,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FLJXPFPW\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 144,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CCVK26MW\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 145,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FKGND3HJ\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 146,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CKC1LRQF\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 147,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0BJZQMPQ1\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 148,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DQVFKPPL\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 149,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D95YCJTZ\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 150,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0GKNCPQJB\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 151,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0F1F72D9K\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 152,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0BTKNXQZK\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 153,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DHCSQHY8\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 154,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0D4HN25PR\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 155,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0BZ3WYSB5\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 156,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0FFH845XD\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 157,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0C1Z75HKX\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 158,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DNM63LVN\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 159,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0DBV415GJ\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 160,
-        "Campaign Name": "FATHERDAY_DADHAT_PT_ALLSG",
-        "Loại Campaign": "Product Targeting",
-        "Target": "asin=\"B0CKC1TX2F\"",
-        "Ghi chú": "[[targeting]-[0.55]-[0T-0R-0P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 161,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_broad_dad baseball cap gift_20TRP",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "dad baseball cap gift",
-        "Ghi chú": "[[Broad]-[0.3]-[20T-20R-20P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 162,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_broad_dad hat_20TRP",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "dad hat",
-        "Ghi chú": "[[Broad]-[0.3]-[20T-20R-20P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 163,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_broad_mens dad hat premium_20TRP",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "mens dad hat premium",
-        "Ghi chú": "[[Broad]-[0.3]-[20T-20R-20P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 164,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_phrase_black trucker hat_30TRP",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "black trucker hat",
-        "Ghi chú": "[[Phrase]-[0.77]-[30T-30R-30P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 165,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_phrase_dad hat_30TRP",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "dad hat",
-        "Ghi chú": "[[Phrase]-[0.65]-[30T-30R-30P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 166,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_phrase_dad_hat_30TRP_20260423",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "dad hat",
-        "Ghi chú": "[[Phrase]-[0.6]-[30T-30R-30P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 167,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_exact_fathers_day_hat_for_men_35TRP_20260423",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "fathers day hat for men",
-        "Ghi chú": "[[Exact]-[0.7]-[35T-35R-35P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 168,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_broad_gift for dad hat_20TRP",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "gift for dad hat",
-        "Ghi chú": "[[Broad]-[0.3]-[20T-20R-20P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 169,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_exact_dad_hat_35TRP_20260423",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "dad hat",
-        "Ghi chú": "[[Exact]-[0.7]-[35T-35R-35P]]",
-        "Status": "",
-        "metrics_by_date": {}
-      },
-      {
-        "STT": 170,
-        "Campaign Name": "FATHERDAY_DADHAT_KT_phrase_fathers_day_gift_30TRP_20260423",
-        "Loại Campaign": "Keyword (Từ khóa)",
-        "Target": "fathers day gift",
-        "Ghi chú": "[[Phrase]-[0.4]-[30T-30R-30P]]",
         "Status": "",
         "metrics_by_date": {}
       }
@@ -3781,128 +2247,6 @@
       }
     ]
   },
-  " DESK-DECOR_BUTTERFLYMOM": [
-    [
-      "STT",
-      "Campaign Name",
-      "Loại Campaign",
-      "Target",
-      "Ghi chú",
-      "Trạng thái"
-    ],
-    [
-      "1",
-      null,
-      "Keyword (Từ khóa)",
-      "butterfly decor",
-      "Exact 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly gifts for women",
-      "Exact 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly gift",
-      "Exact 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "mothers day gifts for daughter",
-      "Exact 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly accessories",
-      "Exact 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly gifts",
-      "Exact 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly gift For mom",
-      "Exact 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly decor",
-      "phrase 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly gifts for women",
-      "phrase 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly gift",
-      "phrase 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "mothers day gifts for daughter",
-      "phrase 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly accessories",
-      "phrase 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly gifts",
-      "phrase 0.67, 30TRP",
-      "Chưa tạo"
-    ],
-    [
-      null,
-      null,
-      null,
-      "butterfly gift For mom",
-      "phrase 0.67, 30TRP",
-      "Chưa tạo"
-    ]
-  ],
   "DESK-DECOR_BUTTERFLYMOM": {
     "sku_title": "SKU: DESK-DECOR_BUTTERFLYMOM",
     "base_headers": [
@@ -3911,7 +2255,10 @@
       "Loại Campaign",
       "Target",
       "Ghi chú",
-      "Status"
+      "Status",
+      "Impression",
+      "click",
+      "order"
     ],
     "date_blocks": [],
     "rows": [
@@ -3922,6 +2269,9 @@
         "Target": "mothers day gifts",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -3931,6 +2281,9 @@
         "Target": "gifts for mom",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -3940,6 +2293,9 @@
         "Target": "birthday gifts for mom",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -3949,6 +2305,9 @@
         "Target": "mom birthday gifts",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "3",
+        "click": "0",
+        "order": "0",
         "metrics_by_date": {}
       },
       {
@@ -3958,6 +2317,9 @@
         "Target": "mothers day gifts for mom",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -3967,6 +2329,9 @@
         "Target": "mothers day",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -3976,6 +2341,9 @@
         "Target": "mom gifts",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -3985,6 +2353,9 @@
         "Target": "gifts for mom birthday",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -3994,6 +2365,9 @@
         "Target": "mom birthday card",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4003,6 +2377,9 @@
         "Target": "mothers day gift",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4012,6 +2389,9 @@
         "Target": "birthday card for mom",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4021,6 +2401,9 @@
         "Target": "birthday gift for mom",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4030,6 +2413,9 @@
         "Target": "mom gift",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4039,6 +2425,9 @@
         "Target": "mom gifts for birthday",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4048,6 +2437,9 @@
         "Target": "happy mothers day",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4057,6 +2449,9 @@
         "Target": "mother day gifts",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4066,6 +2461,9 @@
         "Target": "mom birthday",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "1",
+        "click": "0",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4075,6 +2473,9 @@
         "Target": "mothers day gifts",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "1",
+        "click": "0",
+        "order": "0",
         "metrics_by_date": {}
       },
       {
@@ -4084,6 +2485,9 @@
         "Target": "gifts for mom",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4093,6 +2497,9 @@
         "Target": "birthday gifts for mom",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4102,6 +2509,9 @@
         "Target": "mom birthday gifts",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4111,6 +2521,9 @@
         "Target": "mothers day gifts for mom",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4120,6 +2533,9 @@
         "Target": "mothers day",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "30",
+        "click": "0",
+        "order": "0",
         "metrics_by_date": {}
       },
       {
@@ -4129,6 +2545,9 @@
         "Target": "mom gifts",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4138,6 +2557,9 @@
         "Target": "gifts for mom birthday",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4147,6 +2569,9 @@
         "Target": "mom birthday card",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4156,6 +2581,9 @@
         "Target": "mothers day gift",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4165,6 +2593,9 @@
         "Target": "birthday card for mom",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4174,6 +2605,9 @@
         "Target": "birthday gift for mom",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4183,6 +2617,9 @@
         "Target": "mom gift",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4192,6 +2629,9 @@
         "Target": "mom gifts for birthday",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4201,6 +2641,9 @@
         "Target": "happy mothers day",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4210,6 +2653,9 @@
         "Target": "mother day gifts",
         "Ghi chú": "[[Phrase]-[0.5]-[33T-0R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4219,6 +2665,9 @@
         "Target": "mom birthday",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4228,6 +2677,9 @@
         "Target": "mothers day gifts",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4237,6 +2689,9 @@
         "Target": "gifts for mom",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4246,6 +2701,9 @@
         "Target": "birthday gifts for mom",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4255,6 +2713,9 @@
         "Target": "mom birthday gifts",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4264,6 +2725,9 @@
         "Target": "mothers day gifts for mom",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4273,6 +2737,9 @@
         "Target": "mothers day",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4282,6 +2749,9 @@
         "Target": "mom gifts",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "2",
+        "click": "0",
+        "order": "0",
         "metrics_by_date": {}
       },
       {
@@ -4291,6 +2761,9 @@
         "Target": "gifts for mom birthday",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4300,6 +2773,9 @@
         "Target": "mom birthday card",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4309,6 +2785,9 @@
         "Target": "mothers day gift",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4318,6 +2797,9 @@
         "Target": "birthday card for mom",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4327,6 +2809,9 @@
         "Target": "birthday gift for mom",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4336,6 +2821,9 @@
         "Target": "mom gift",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4345,6 +2833,9 @@
         "Target": "mom gifts for birthday",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4354,6 +2845,9 @@
         "Target": "happy mothers day",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4363,6 +2857,9 @@
         "Target": "mother day gifts",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4372,6 +2869,9 @@
         "Target": "mom birthday",
         "Ghi chú": "",
         "Status": "Active",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4381,6 +2881,9 @@
         "Target": "happy mothers day",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4390,6 +2893,9 @@
         "Target": "birthday gifts for mom",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4399,6 +2905,9 @@
         "Target": "birthday gift for mom",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4408,6 +2917,9 @@
         "Target": "birthday card for mom",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4417,6 +2929,9 @@
         "Target": "mothers day gifts for mom",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4426,6 +2941,9 @@
         "Target": "mothers day gifts",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4435,6 +2953,9 @@
         "Target": "mom birthday card",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4444,6 +2965,9 @@
         "Target": "mom gifts for birthday",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4453,6 +2977,9 @@
         "Target": "gifts for mom birthday",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4462,6 +2989,9 @@
         "Target": "mom gifts for birthday",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4471,6 +3001,9 @@
         "Target": "mothers day gift",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4480,6 +3013,9 @@
         "Target": "gifts for mom birthday",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4489,6 +3025,9 @@
         "Target": "mom gifts",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4498,6 +3037,9 @@
         "Target": "birthday gift for mom",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "Chưa tạo",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4507,6 +3049,9 @@
         "Target": "mom birthday card",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4516,6 +3061,9 @@
         "Target": "gifts for mom birthday",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4525,6 +3073,9 @@
         "Target": "mom birthday card",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4534,6 +3085,9 @@
         "Target": "mom birthday gifts",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4543,6 +3097,9 @@
         "Target": "mothers day gifts for mom",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4552,6 +3109,9 @@
         "Target": "mom gifts",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4561,6 +3121,9 @@
         "Target": "mom birthday",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4570,6 +3133,9 @@
         "Target": "mom birthday card",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4579,6 +3145,9 @@
         "Target": "birthday card for mom",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4588,6 +3157,9 @@
         "Target": "mom birthday gifts",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4597,6 +3169,9 @@
         "Target": "mothers day gifts for mom",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4606,6 +3181,9 @@
         "Target": "mom gift",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4615,6 +3193,9 @@
         "Target": "mom gift",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4624,6 +3205,9 @@
         "Target": "mom gifts for birthday",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4633,6 +3217,9 @@
         "Target": "mother day gifts",
         "Ghi chú": "[[Exact]-[0.6]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4642,6 +3229,9 @@
         "Target": "birthday gifts for mom",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4651,6 +3241,9 @@
         "Target": "gifts for mom",
         "Ghi chú": "[[Broad]-[0.35]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       },
       {
@@ -4660,6 +3253,9 @@
         "Target": "mom birthday gifts",
         "Ghi chú": "[[Phrase]-[0.5]-[30T-30R-30P]]",
         "Status": "",
+        "Impression": "",
+        "click": "",
+        "order": "",
         "metrics_by_date": {}
       }
     ]
@@ -4671,7 +3267,7 @@
       "Loại Campaign",
       "Target",
       "Ghi chú",
-      "Trạng thái"
+      "Status"
     ],
     [
       "1",
@@ -19029,6 +17625,921 @@
         "Target": "nurse graduation gift",
         "Ghi chú": "[[Broad]-[0.56]-[10T-0R-0P]]",
         "Status": "",
+        "metrics_by_date": {}
+      }
+    ]
+  },
+  "250TH_DOORSIGN_250THANNIVERSARY": {
+    "sku_title": "250TH_DOORSIGN_250THANNIVERSARY",
+    "base_headers": [
+      "STT",
+      "Campaign Name",
+      "Loại Campaign",
+      "Target",
+      "Ghi chú",
+      "Status",
+      "Nhóm"
+    ],
+    "date_blocks": [],
+    "rows": [
+      {
+        "STT": 1,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "america 250th anniversary door hanger",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 2,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "america 250 door decor",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 3,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "250th anniversary decorations",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 4,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "american eagle decor",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 5,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "bald eagle decor",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 6,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "eagle decor",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 7,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "patriotic desk decor",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 8,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "patriotic office decor",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 9,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "american flag plaque",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 10,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "american flag desk decor",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 11,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "boss day gifts for men",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 12,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "boss gifts for men",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 13,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "army gifts for men",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 14,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "military gifts for men",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 15,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "farewell gifts for coworkers",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 16,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "retirement gifts for men",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 17,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "thank you gifts for boss",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 18,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "eader gifts for men",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 19,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "gifts for dad",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 20,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "father day gifts",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 21,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "husband gifts from wife",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 22,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "eagle gifts",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 23,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "gifts for men who have everything",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 24,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "patriotic gifts for men",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 25,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "cool gifts for men",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 26,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "marine corps gifts for men",
+        "Ghi chú": "phrase 0.4",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 27,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "4th of july decor",
+        "Ghi chú": "broad 0.3",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 28,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "fourth of july decorations",
+        "Ghi chú": "broad 0.3",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 29,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "veterans day decor",
+        "Ghi chú": "broad 0.3",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 30,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "memorial day decor",
+        "Ghi chú": "broad 0.3",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 31,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "4th of july decorations",
+        "Ghi chú": "broad 0.3",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 32,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "1776 to 2026 sign",
+        "Ghi chú": "broad 0.3",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 33,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "american history decor",
+        "Ghi chú": "broad 0.3",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      }
+    ]
+  },
+  "FATHERDAY_DADHAT": {
+    "sku_title": "FATHERDAY_DADHAT",
+    "base_headers": [
+      "STT",
+      "Campaign Name",
+      "Loại Campaign",
+      "Target",
+      "Ghi chú",
+      "Status",
+      "Nhóm"
+    ],
+    "date_blocks": [],
+    "rows": [
+      {
+        "STT": 1,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "dad hat",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 2,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "dadhat",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 3,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "papa hat",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 4,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "dad hats for men",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 5,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "dad cap",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 6,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "camo dad hat",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 7,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "dad cap",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 8,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "best dad hat",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 9,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "daddy hats men (B0GY4JSS94)",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 10,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "mens dad hat",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 11,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "gifts for dad",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 12,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "fathers day gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 13,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "cool dad birthday gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 14,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "fathers day gifts for dad",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 15,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "best dad ever gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 16,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "dad birthday gift",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 17,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "gifts for dad from daughter",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 18,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "birthday gifts for dad",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 19,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "father's day gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 20,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "fathers day hat",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 21,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "fathers day hats",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 22,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "fathers day baseball cap",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 23,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "fathers day hats for dad",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 24,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "best fathers day hat",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 25,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "father's day hat",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 26,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "happy fathers day hat",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 27,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "fathers day dad hat",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 28,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "first fathers day hat",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      }
+    ]
+  },
+  "B0F9PGKBX2": {
+    "sku_title": "B0F9PGKBX2",
+    "base_headers": [
+      "STT",
+      "Campaign Name",
+      "Loại Campaign",
+      "Target",
+      "Ghi chú",
+      "Status",
+      "Nhóm"
+    ],
+    "date_blocks": [],
+    "rows": [
+      {
+        "STT": 1,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "turtle stuff",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 2,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "emotional support turtle",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 3,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "positive turtle",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 4,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "turtle in a jar",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 5,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "turtle souvenir",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 6,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "turtle home decor",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 7,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "sea turtle decor",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 8,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "inspirational turtle",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 9,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "cute turtle accessories",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 10,
+        "Campaign Name": "",
+        "Loại Campaign": "Keyword (Từ khóa)",
+        "Target": "turtle card",
+        "Ghi chú": "exact 0.6",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 1",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 11,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "sea turtle gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 12,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "turtle gifts for women",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 13,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "turtle gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 14,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "turtle gifts for mom",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 15,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "turtle birthday gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 16,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "gifts for turtle lovers",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 17,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "unique turtle gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 18,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "cute turtle gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 19,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "bulk turtle gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 20,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "turtle office gifts",
+        "Ghi chú": "phrase 0.45",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 2",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 21,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "turtle for graduation gift",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 22,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "mothers day turtle gifts",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 23,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "teacher appreciation gifts turtle",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 24,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "mothers day gifts for mom",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 25,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "retirement gifts for women",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
+        "metrics_by_date": {}
+      },
+      {
+        "STT": 26,
+        "Campaign Name": "",
+        "Loại Campaign": "",
+        "Target": "graduation gifts for girls",
+        "Ghi chú": "broad 0.35",
+        "Status": "Chưa tạo",
+        "Nhóm": "Nhóm 3",
         "metrics_by_date": {}
       }
     ]

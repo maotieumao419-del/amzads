@@ -1,0 +1,11 @@
+=== AMZ BULKSHEET VALIDATION REPORT ===
+Baseline Template: mass_sop_part_1.xlsx (Total columns: 28)
+----------------------------------------
+File: Bulk_Create_250TH_4THOFJULY.xlsx
+-> Status: [PASS] - 100% Match
+
+File: Bulk_Create_250TH_HAPPY250YEARS.xlsx
+-> Status: [PASS] - 100% Match
+
+----------------------------------------
+Validation Summary: 2 Passed | 0 Failed

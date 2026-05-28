@@ -212,7 +212,7 @@ def load_processed_sheets(processed_file: str) -> dict[str, pd.DataFrame]:
         header_idx = 0
         for idx, row in df.iterrows():
             row_vals = [str(x).strip().lower() for x in row.values if pd.notna(x)]
-            if "target" in row_vals or "campaign name" in row_vals or "ghi chú" in row_vals:
+            if "target" in row_vals or "campaign name" in row_vals or "ghi chú" in row_vals or "note" in row_vals:
                 header_idx = idx
                 break
                 
@@ -418,9 +418,9 @@ def main():
 
         col_camp = find_col(df_sku, "Campaign Name")
         col_kw   = find_col(df_sku, "Target")
-        col_note = find_col(df_sku, "Ghi chú")
+        col_note = find_col(df_sku, "Ghi chú") or find_col(df_sku, "Note")
         col_type = find_col(df_sku, "Loại Campaign")
-        col_ts   = find_col(df_sku, "Trạng thái")
+        col_ts   = find_col(df_sku, "Trạng thái") or find_col(df_sku, "Trạng Thái") or find_col(df_sku, "Status")
 
         if not col_kw:
             print(f"  [ERROR] Thiếu cột 'Target'. Cột hiện có: {list(df_sku.columns)}")

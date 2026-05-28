@@ -472,7 +472,7 @@ def main():
 
             updated = inject_metrics(internal_data, campaign_map, date_range)
 
-            # Save UPDATED JSON
+            # Save UPDATED JSON (giữ nguyên Ghost campaigns)
             base_name  = basename.replace('_synced', '').replace('.json', '')
             out_json   = os.path.join(JSON_DIR, f"{base_name}_UPDATED.json")
             with open(out_json, 'w', encoding='utf-8') as f:
@@ -484,6 +484,34 @@ def main():
             ok = json_to_internal_xlsx(out_json, out_xlsx)
             if ok:
                 logging.info(f"  → xlsx: {os.path.basename(out_xlsx)}")
+
+            # ── Tạo file UPNEW (Lọc sạch Ghost campaigns) ─────────────────────
+            import copy
+            upnew = copy.deepcopy(updated)
+            for sheet_name, sheet_data in upnew.items():
+                if not isinstance(sheet_data, dict) or 'rows' not in sheet_data:
+                    continue
+                
+                # Lọc bỏ tất cả những dòng có Status == 'No-active'
+                sheet_data['rows'] = [
+                    row for row in sheet_data['rows'] 
+                    if row.get('Status') != 'No-active'
+                ]
+                
+                # Đánh lại số thứ tự STT
+                for i, row in enumerate(sheet_data['rows'], 1):
+                    row['STT'] = i
+
+            out_upnew_json = os.path.join(JSON_DIR, f"{base_name}_UPNEW.json")
+            with open(out_upnew_json, 'w', encoding='utf-8') as f:
+                json.dump(upnew, f, ensure_ascii=False, indent=2, default=str)
+            logging.info(f"  → JSON (CLEANED): {os.path.basename(out_upnew_json)}")
+
+            out_upnew_xlsx = os.path.join(FINAL_DIR, f"{base_name}_UPNEW.xlsx")
+            ok_new = json_to_internal_xlsx(out_upnew_json, out_upnew_xlsx)
+            if ok_new:
+                logging.info(f"  → xlsx (CLEANED): {os.path.basename(out_upnew_xlsx)}")
+            # ───────────────────────────────────────────────────────────────────
 
             # Generate Unmatched Report
             generate_unmatched_report(out_json, bj, date_range, REPORTS_DIR)

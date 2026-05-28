@@ -74,8 +74,11 @@ def _build_master_map(records: list) -> dict:
             entity = str(row.get('Entity', '')).strip().lower()
             if entity == 'keyword':
                 target = str(row.get('Keyword Text', '')).strip()
+                raw_m = str(row.get('Match Type', '')).strip().lower()
+                match = raw_m.capitalize() if raw_m in ('exact', 'phrase', 'broad') else ''
             elif entity == 'product targeting':
                 target = str(row.get('Product Targeting Expression', '')).strip()
+                match = ''
             else:
                 continue
             if not target:
@@ -91,7 +94,7 @@ def _build_master_map(records: list) -> dict:
                 'Orders':      _f('Orders')
             }
             for sku in skus:
-                sku_map.setdefault(sku, {})[(camp_name, target)] = metrics
+                sku_map.setdefault(sku, {})[(camp_name, target, match)] = metrics
 
     return sku_map
 
@@ -136,13 +139,18 @@ def validate_metric_integrity(bulk_json_paths: list, updated_json_paths: list) -
                 continue
             last_date = date_blocks[-1]
 
+            import re
             for row in sheet_data.get('rows', []):
                 camp   = str(row.get('Campaign Name', '')).strip()
                 target = str(row.get('Target', '')).strip()
+                note   = str(row.get('Ghi ch\u00fa') or row.get('Ghi chu') or '')
+                m_match = re.search(r'\[\[(Exact|Phrase|Broad|targeting)\]', note, re.IGNORECASE)
+                match_val = m_match.group(1).capitalize() if m_match and m_match.group(1).lower() in ('exact', 'phrase', 'broad') else ''
+                
                 if not camp or not target:
                     continue
 
-                key = (camp, target)
+                key = (camp, target, match_val)
                 if key not in ref:
                     continue
 

@@ -113,10 +113,22 @@ def rebuild_internal(src_path: str) -> bool:
 
 # ─── Entry point ────────────────────────────────────────────────────────────
 
+def clean_working_json():
+    """Xóa các file JSON cũ trong thư mục working_json trước khi rebuild để tránh dính file rác."""
+    old_files = glob.glob(os.path.join(JSON_DIR, '*.json'))
+    for f in old_files:
+        try:
+            os.remove(f)
+            logging.info(f"[clean] Đã xóa file cũ: {os.path.basename(f)}")
+        except Exception as e:
+            logging.warning(f"[clean] Không thể xóa {f}: {e}")
+
 def main():
     print("\n" + "=" * 60)
     print("  REBUILD — Convert raw_xlsx → working_json")
     print("=" * 60)
+
+    clean_working_json()
 
     # ── 1. Amazon Bulk files ─────────────────────────────────────────
     bulk_files = sorted(

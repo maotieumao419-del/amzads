@@ -1,0 +1,11 @@
+0,1,2,3,4,5
+250TH_STICKER_SET5,,,,,
+STT,Campaign Name,Loại Campaign,Target,Note,Trạng thái
+1,250TH_STICKER_SET5_KT_exact_250th anniversary decal_35TRP,Keyword (Từ khóa),250th anniversary decal,exact 0.3_35TPR,Chưa tạo
+2,250TH_STICKER_SET5_KT_exact_250 year american anniversary sticker_35TRP,Keyword (Từ khóa),250 year american anniversary sticker,exact 0.3_35TPR,Chưa tạo
+3,250TH_STICKER_SET5_KT_exact_250 anniversary stickers_35TRP,Keyword (Từ khóa),250 anniversary stickers,exact 0.3_35TPR,Chưa tạo
+4,250TH_STICKER_SET5_KT_exact_250 anniversary usa stickers_35TRP,Keyword (Từ khóa),250 anniversary usa stickers,exact 0.3_35TPR,Chưa tạo
+5,250TH_STICKER_SET5_KT_exact_america 250 stickers_35TRP,Keyword (Từ khóa),america 250 stickers,exact 0.3_35TPR,Chưa tạo
+6,250TH_STICKER_SET5_KT_exact_patriotic stickers_35TRP,Keyword (Từ khóa),patriotic stickers,exact 0.3_35TPR,Chưa tạo
+7,250TH_STICKER_SET5_KT_exact_250 anniversary usa decorations_35TRP,Keyword (Từ khóa),250 anniversary usa decorations,exact 0.3_35TPR,Chưa tạo
+8,250TH_STICKER_SET5_KT_phrase_250th anniversary decal_30TRP,Keyword (Từ khóa),250th anniversary decal,"Phrase 0.4, 30TRP",Chưa tạo

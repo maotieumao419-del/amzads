@@ -2,20 +2,51 @@
 
 def get_ui_formats(workbook):
     """
-    Trả về dictionary chứa các format tĩnh (Theme) cho UI Dashboard.
+    Trả về dictionary chứa toàn bộ format cells cho Dashboard.
+    Brand palette: #232F3E (Amazon Navy), #FF9900 (Amazon Orange), #FEBD69 (Amazon Gold)
     """
     return {
+        # ── Tiêu đề sheet ──────────────────────────────────────────────────
         'title': workbook.add_format({
-            'bold': True, 'font_size': 14, 'bg_color': '#232F3E', 
-            'color': '#FFFFFF', 'align': 'center', 'valign': 'vcenter'
+            'bold': True, 'font_size': 14,
+            'bg_color': '#232F3E', 'color': '#FFFFFF',
+            'align': 'center', 'valign': 'vcenter'
         }),
+        'subtitle': workbook.add_format({
+            'bold': True, 'font_size': 11,
+            'bg_color': '#37475A', 'color': '#FEBD69',
+            'align': 'left', 'valign': 'vcenter'
+        }),
+
+        # ── Header bảng ────────────────────────────────────────────────────
         'header': workbook.add_format({
-            'bold': True, 'border': 1, 'bg_color': '#232F3E', 
-            'color': '#FFFFFF', 'align': 'center'
+            'bold': True, 'border': 1,
+            'bg_color': '#232F3E', 'color': '#FFFFFF',
+            'align': 'center', 'valign': 'vcenter',
+            'text_wrap': True
         }),
+        'header_orange': workbook.add_format({
+            'bold': True, 'border': 1,
+            'bg_color': '#FF9900', 'color': '#FFFFFF',
+            'align': 'center', 'valign': 'vcenter'
+        }),
+        'header_light': workbook.add_format({
+            'bold': True, 'border': 1,
+            'bg_color': '#D9E1F2', 'color': '#232F3E',
+            'align': 'center', 'valign': 'vcenter'
+        }),
+
+        # ── Ô nhập liệu (Dropdown) ─────────────────────────────────────────
         'dropdown': workbook.add_format({
-            'border': 1, 'bg_color': '#FFFFCC', 'bold': True, 'align': 'center'
+            'border': 2, 'bg_color': '#FFFFCC', 'bold': True,
+            'align': 'left', 'valign': 'vcenter'
         }),
+        'label': workbook.add_format({
+            'bold': True, 'bg_color': '#F2F2F2',
+            'border': 1, 'align': 'right', 'valign': 'vcenter'
+        }),
+
+        # ── Metric formats ─────────────────────────────────────────────────
         'metric_num': workbook.add_format({
             'border': 1, 'align': 'center', 'num_format': '#,##0'
         }),
@@ -25,59 +56,95 @@ def get_ui_formats(workbook):
         'metric_percent': workbook.add_format({
             'border': 1, 'align': 'center', 'num_format': '0.00%'
         }),
-        'cell_border': workbook.add_format({
-            'border': 1, 'align': 'left'
+        'metric_text': workbook.add_format({
+            'border': 1, 'align': 'left', 'valign': 'vcenter'
         }),
-        # Màu sắc Conditional Formatting
-        'alert_red': workbook.add_format({'bg_color': '#FFC7CE', 'font_color': '#9C0006'}),
+        'metric_center': workbook.add_format({
+            'border': 1, 'align': 'center', 'valign': 'vcenter'
+        }),
+
+        # ── Health Tags ────────────────────────────────────────────────────
+        'health_star': workbook.add_format({
+            'border': 1, 'align': 'center', 'bold': True,
+            'bg_color': '#C6EFCE', 'font_color': '#006100'
+        }),
+        'health_bleeder': workbook.add_format({
+            'border': 1, 'align': 'center', 'bold': True,
+            'bg_color': '#FFC7CE', 'font_color': '#9C0006'
+        }),
+        'health_watch': workbook.add_format({
+            'border': 1, 'align': 'center', 'bold': True,
+            'bg_color': '#FFEB9C', 'font_color': '#9C6500'
+        }),
+        'health_dead': workbook.add_format({
+            'border': 1, 'align': 'center', 'bold': True,
+            'bg_color': '#808080', 'font_color': '#FFFFFF'
+        }),
+        'health_sleep': workbook.add_format({
+            'border': 1, 'align': 'center',
+            'bg_color': '#EDEDED', 'font_color': '#666666'
+        }),
+        'health_new': workbook.add_format({
+            'border': 1, 'align': 'center',
+            'bg_color': '#DDEEFF', 'font_color': '#004080'
+        }),
+
+        # ── Suggested Action ───────────────────────────────────────────────
+        'suggest_increase': workbook.add_format({
+            'border': 1, 'align': 'center',
+            'bg_color': '#E2EFDA', 'font_color': '#375623'
+        }),
+        'suggest_decrease': workbook.add_format({
+            'border': 1, 'align': 'center',
+            'bg_color': '#FCE4D6', 'font_color': '#833C00'
+        }),
+        'suggest_pause': workbook.add_format({
+            'border': 1, 'align': 'center',
+            'bg_color': '#FFC7CE', 'font_color': '#9C0006'
+        }),
+        'suggest_monitor': workbook.add_format({
+            'border': 1, 'align': 'center',
+            'bg_color': '#F2F2F2', 'font_color': '#595959'
+        }),
+
+        # ── Conditional Formatting colors ──────────────────────────────────
+        'alert_red':    workbook.add_format({'bg_color': '#FFC7CE', 'font_color': '#9C0006'}),
         'alert_yellow': workbook.add_format({'bg_color': '#FFEB9C', 'font_color': '#9C6500'}),
-        'alert_green': workbook.add_format({'bg_color': '#C6EFCE', 'font_color': '#006100'}),
-        
-        # Bảng màu cho Chart
+        'alert_green':  workbook.add_format({'bg_color': '#C6EFCE', 'font_color': '#006100'}),
+
+        # ── Chart palette (dict, không phải format object) ─────────────────
         'chart_colors': {
-            'spend': '#FF9900',  # Cam Amazon
-            'sales': '#232F3E',  # Xanh đậm Amazon
-            'acos': '#FF0000'    # Đỏ
+            'spend': '#FF9900',   # Amazon Orange
+            'sales': '#232F3E',   # Amazon Navy
+            'acos':  '#CC0000',   # Đỏ đậm
+            'ctr':   '#5B9BD5',   # Xanh dương
         }
     }
 
+
 def apply_conditional_formatting(worksheet, formats, target_acos):
     """
-    Áp dụng luật chẩn đoán phễu PPC bằng conditional formatting của xlsxwriter.
-    Giả định bảng dữ liệu nằm từ dòng 6 đến 50.
-    Cột D: CTR, Cột H: CVR, Cột I: ACOS
+    Áp dụng conditional formatting cho bảng chi tiết campaign/keyword.
+    Dùng cho cả CAMPAIGNS sheet và DEEP DIVE sheet.
+    col_acos_letter: chữ cột Excel chứa ACOS (vd: 'I')
     """
-    red_fmt = formats['alert_red']
+    red_fmt    = formats['alert_red']
     yellow_fmt = formats['alert_yellow']
-    green_fmt = formats['alert_green']
+    green_fmt  = formats['alert_green']
 
-    # 1. Cột CTR (D) < 0.003 -> Báo Đỏ
-    worksheet.conditional_format('D6:D50', {
-        'type': 'cell',
-        'criteria': '<',
-        'value': 0.003,
+    # ACOS > target → đỏ
+    worksheet.conditional_format('I7:I100', {
+        'type': 'cell', 'criteria': '>', 'value': target_acos,
         'format': red_fmt
     })
-    
-    # 2. Cột CVR (H) < 0.05 -> Báo Vàng
-    worksheet.conditional_format('H6:H50', {
-        'type': 'cell',
-        'criteria': '<',
-        'value': 0.05,
-        'format': yellow_fmt
-    })
-    
-    # 3. Logic ACOS (I) dựa vào ô Giai đoạn ở $B$3
-    # Nếu B3="Maintain" VÀ ACOS > target_acos -> Báo Đỏ
-    worksheet.conditional_format('I6:I50', {
+    # ACOS > 0 và ≤ target → xanh
+    worksheet.conditional_format('I7:I100', {
         'type': 'formula',
-        'criteria': f'=AND($B$3="Maintain", $I6>{target_acos})',
-        'format': red_fmt
-    })
-    
-    # Nếu B3="Maintain" VÀ ACOS <= target_acos (và lớn hơn 0 để bỏ qua ô trống) -> Báo Xanh
-    worksheet.conditional_format('I6:I50', {
-        'type': 'formula',
-        'criteria': f'=AND($B$3="Maintain", $I6<={target_acos}, $I6>0)',
+        'criteria': f'=AND($I7>{0}, $I7<={target_acos})',
         'format': green_fmt
+    })
+    # CTR < 0.3% → vàng
+    worksheet.conditional_format('D7:D100', {
+        'type': 'cell', 'criteria': '<', 'value': 0.003,
+        'format': yellow_fmt
     })
